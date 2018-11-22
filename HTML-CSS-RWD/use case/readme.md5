@@ -1,0 +1,23 @@
+Week1
+UC1-> Food Recipe
+Create a Food recipe one column layout page using layout properties, margins, padding, borders. 
+
+UC2-> Chess Board
+Create a layout which looks like chess border, which shows the prosition property absolute & relative . using top , bottom etc. 
+
+UC3-> Sapient Tours(Fixed Width) 
+Create site called Sapient Tours by adding nav bars, image list , footer which demonstrateds advanced layout using all box properties such as z-index , overflow, absolute & relative together. 
+
+UC4-> Calculator create 
+calculater using flexbox layout , which shows how to create complex layouts using flexbox properties such as flex, flex-wrap,flex-order,nested 
+
+Week2
+UC5-> Agoda
+create home page of agoda as web design. This content is static.
+
+UC6-> Web Tours 
+Modify the Sapient into responsive web design.
+
+UC7-> Table
+use of table layout to create a temprature records.
+
