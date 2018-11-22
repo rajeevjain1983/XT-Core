@@ -1,67 +1,25 @@
-var isAvtive=true;
+var price =100;
+var todayPrice=100
+var status=price==todayPrice;
+console.log(status);
 
-if(isAvtive)
- console.log('Active');
- else
- {
-    console.log('Not Active');
- }
+var stockvalue="100";
+var todayValue=100;
+var stockStatus=stockvalue==todayValue;
+console.log(stockStatus);
 
-// 0 is false and 1 is true
- var value=0;
- if(value)
- {
-     console.log("truthy");
- }
 
- else{
-    console.log("falsy");
- }
+//Comparsional Operator
 
-//String values 
- var name="Rajeev";
- if(name)
- {
-     console.log(`My Name is ${name}`);
- }
+var a=40;
+var b=30;
+var isBig=a>b;
 
- else{
-    console.log('Dot know');
- }
-
- // null is false
-
- var a =null;
-
- if (a)
- {
-     console.log('have some value');
- }
- else
- {
-     console.log('Null values');
- }
-
- // Blank Vlaues 
-
- var a='';
- if (a)
- {
-     console.log('Not Blank Values');
- }
- else
- {
-     console.log('Blank Values');
- }
-
- 
-
- var a;
- if (a)
- {
-     console.log('Not Undefined');
- }
- else
- {
-     console.log('Undefined');
- }
+if(isBig)
+{
+    console.log('A is Big');
+}
+else
+{
+    console.log('B is Big')
+}
