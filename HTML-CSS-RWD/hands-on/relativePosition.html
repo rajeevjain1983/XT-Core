@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body{
+            margin:0px;
+            padding:0px
+        }
+
+        .wrapper{
+            width:900px;
+            margin:20px auto;
+        }
+        body {
+            background-color:white;
+            font: 100% Georgia, "Times New Roman", Times;
+        }
+       p {
+           background-color: aqua;
+           border: 3px solid blue;
+           padding: 10px;
+           margin: 10px;
+       }
+
+       span{
+           background: red;
+           border: 1px solid black;
+       }
+       .positioned{
+           position:relative;
+            background: yellow;
+            top:-40px;
+            left:50px;
+       }
+       .positionedRelative{
+           position:relative;
+            background: green;
+       }
+    </style>
+</head>
+<body>
+
+        <div class="wrapper">
+    <h1> Basic Flow Relative( Positions )</h1>
+    <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. </p>
+            <p class="positioned"> Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. </p>
+                    <p>
+                        <span>This is last para</span>
+                        Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s,<span>when an unknown printer took a galley of type and scrambled it to make a
+                            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</span>
+                            remaining essentially unchanged. </p>
+   </div>
+   </body>
+</html>
