@@ -1,86 +1,88 @@
-// Model
-class Todo {
-    constructor(title, date) {
-        Todo.nextId++;
-        this.id = Todo.nextId; // auto_increment
-        this.title = title;
-        this.completed = false
-        this.date = date
-    }
+///////////////////////// AJAX PROGARMMING
+
+console.log('AJAX PROGRAMMING');
+console.log('USING RAW XMLHTTP REQUEST');
+
+
+// function reqListener(){
+//     console.log(this.responseText);
+// }
+
+// const oReq=new XMLHttpRequest();
+// oReq.addEventListener("load",reqListener);
+// oReq.open("GET","https://jsonplaceholder.typicode.com/users");
+// oReq.send();
+
+
+
+
+// function getUser(){
+//     const url="https://jsonplaceholder.typicode.com/users";
+//     return fetch(url);
+// }
+
+// getUser()
+// .then(res=>res.json())
+// .then(body=>console.log(JSONbody));
+
+
+// function getUser(apiurl){
+//     const url=apiurl
+//     return fetch(url);
+// }
+
+// getUser("https://api.github.com/users/rajeevjain1983")
+// .then(res=>res.json())
+// .then(body=>console.log(body));
+
+
+
+
+// function getUser()
+// {
+//     Promise.all([
+//         fetch("https://api.github.com/users/rajeevjain1983"),
+//         fetch("https://api.github.com/users/akanksha-211"),
+//         fetch("https://api.github.com/users/adishmodi")
+//       ])
+//      .then(res=>res.map((item,index)=>{
+//     item.json()
+//     .then(response=>console.log(response));
+//      }));
+// }
+
+// getUser();
+
+    
+// function getUser()
+// {
+//    return Promise.all([
+//         fetch("https://api.github.com/users/rajeevjain1983"),
+//         fetch("https://api.github.com/users/akanksha-211"),
+//         fetch("https://api.github.com/users/adishmodi")
+//       ])
+     
+// }
+// getUser()
+// .then(res=>res.map((item,index)=>{
+//         item.json()
+//         .then(response=>console.log(response));
+//          }));
+
+
+function getUser()
+{
+   return Promise.all([
+        fetch("https://jsonplaceholder.typicode.com/users"),
+        fetch("https://jsonplaceholder.typicode.com/users"),
+        fetch("https://jsonplaceholder.typicode.com/users")
+      ])
+     
 }
-Todo.nextId = 0;
-// Service
-class TodosService {
-    constructor(todo) {
-        this.todolist=[todo];
-    }
-    addTodo(title) {
-        let todo=new Todo(title,new Date());
-        this.todolist.push(todo);
-    }
-    editTodo(id, newTitle) {
-            this.todolist.forEach(function(item,index){
-                if(item.id===id)
-                {
-                    item.title=newTitle
-                }
-            });
-    }
-    completeTodo(id) {
-        this.todolist.forEach(function(item,index){
-            if(item.id===id)
-            {
-                item.completed=true;
-            }
-        });
-    }
-    completeAll() {
-        this.todolist.forEach(function(item,index){
-            item.completed=true;
-        });
-    }
-    deleteTodo(id) {
-        for (let i = 0; i < this.todolist.length; i++) { 
-            if(this.todolist[i].id==id)
-            {
-                this.todolist.splice(i,1);
-            }
-        }
+getUser()
+.then(res=>res.map((item,index)=>{
+        item.json()
+        .then(response=>console.log(response[0].name));
+         }));
 
-        // this.todolist.forEach(function(item,index){
-        //     if(item.id===id)
-        //     {
-        //         //item.completed=true;
-        //         this.todolist.splice(index,1);
-        //     }
-        // });
-    }
-    clearCompleted() {
-        this.todolist.forEach(function(item,index){
-            item.completed=false;
-        });
-    }
-    viewTodos(filter) {
-        this.todolist.forEach(function(item,index){
-            console.log(item);
-        });
-    }
-}
-
-let todo=new Todo('',new Date());
-const service = new TodosService(todo);
-
-
-service.addTodo('Rahul');
-service.addTodo('Naren');
-service.editTodo(2,'ssss');
-service.completeTodo(1);
-service.completeAll();
-//service.deleteTodo(2);
-service.clearCompleted();
-
-service.viewTodos();
-
-
-
-//console.log(service.todolist);
+ 
