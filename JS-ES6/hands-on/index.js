@@ -70,19 +70,92 @@ console.log('USING RAW XMLHTTP REQUEST');
 //          }));
 
 
-function getUser()
-{
-   return Promise.all([
-        fetch("https://jsonplaceholder.typicode.com/users"),
-        fetch("https://jsonplaceholder.typicode.com/users"),
-        fetch("https://jsonplaceholder.typicode.com/users")
-      ])
+// function getUser()
+// {
+//    return Promise.all([
+//         fetch("https://jsonplaceholder.typicode.com/users"),
+//         fetch("https://jsonplaceholder.typicode.com/users"),
+//         fetch("https://jsonplaceholder.typicode.com/users")
+//       ])
      
-}
-getUser()
-.then(res=>res.map((item,index)=>{
-        item.json()
-        .then(response=>console.log(response[0].name));
-         }));
+// }
+// getUser()
+// .then(res=>res.map((item,index)=>{
+//         item.json()
+//         .then(response=>console.log(response[0].name));
+//          }));
 
  
+
+//Asyn functions
+
+// async function getUser(){
+//   return Promise.resolve({
+//     id:2,
+//     name: 'Rajeev'
+//   })
+// }
+// getUser().then(res=>console.log(res));
+
+// /////////////
+
+// async function getValue(){
+//   return 10;
+// }
+
+// getValue().then(res=>console.log(res));
+
+// ///////////
+
+// async function f(){
+//   let promise=new Promise((resolve,reject)=>{
+//     setTimeout(()=>resolve("done!"),1000)
+//   });
+
+//   let result=await promise;// wait till the promise
+//   console.log(result);
+// }
+
+// f();
+
+////////////////////////////////////
+
+
+// async function getUsers(url){
+//  // debugger
+//   let response=await fetch(url);
+//   let body=await response.json();
+//   return body;
+// }
+// getUsers('https://jsonplaceholder.typicode.com/users')
+// .then(res=>console.log(res));
+
+// class Waiter{
+//   async wait(){
+//     return await Promise.resolve(13333);
+//   }
+// }
+
+// new Waiter()
+// .wait()
+// .then(res=>console.log(res));
+
+
+//Exception and Error Handling in java Script
+
+
+async function errorHandler(){
+  try{
+    let reuslt1=await Promise.resolve('hey -1');
+    console.log(reuslt1);
+    let response=await fetch('https://no-scuh-url');
+  }
+  catch(err){
+    console.log('Error:::'+err);
+  }
+  finally{
+    console.log('code completed');
+  }
+}
+
+errorHandler();
