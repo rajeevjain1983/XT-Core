@@ -1,0 +1,8 @@
+SOLID Design Principles
+CLEAN CODE Patterns:
+ ->http://blog.cleancoder.com/
+
+Single Responsibility Principle
+->The Single Responsibility Principle (SRP) states that each software module should have one and only one reason to change. 
+
+ What defines a reason to change?

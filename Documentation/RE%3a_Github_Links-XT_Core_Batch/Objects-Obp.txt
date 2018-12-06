@@ -1,0 +1,10 @@
+Object:
+
+ECMAScript is an object-based programming language with the prototype-based organization, having the concept of an object as its core abstraction.
+
+Def. 1: Object: An object is a collection of properties, and has a single prototype object. The prototype may be either an object or the null value. 
+
+Prototypes:
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Using_prototypes_in_JavaScript

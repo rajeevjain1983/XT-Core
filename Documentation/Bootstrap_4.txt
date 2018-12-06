@@ -1,0 +1,774 @@
+
+Bootstrap :
+  
+   ->CSS 3
+   ->HTML 5
+   ->Plugin-JS - Plugin JS JQuery
+
+QuickStart:
+ How to add bootstrap in our project?
+
+->zip file
+
+->CDN
+
+->Package Managers -npm,yarn
+
+Bootstrap comes three folders
+->css
+    ->.css  =>dev version
+    ->.min.css =>production version
+    ->.map => for mapping min with dev =>readable files
+->fonts
+    ->fonts,icon styles
+->js
+    ->Component files(widgets)
+      ->Manipulating styles using js ->JQuery
+
+
+Steps to start Bootstrap?
+
+1.add css in head tag
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+2.<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+BootStrap Page Design apporach:
+
+ Mobile First
+ "Bootstrap is developed mobile first, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries".
+
+
+
+Border boxing and Bootstrap:
+
+Border has enabled border box css property , if you want override for any widget
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+Compiled CSS:
+
+SASS / LESS =>CSS
+
+
+package manager:
+>npm init
+>npm install bootstrap --save-dev
+
+.............................................................
+
+Layouts:
+   Bootstrap layouts are built on top of flex box.
+   Bootstrap provides layout classes which abstracted core css  
+   flex box.
+   
+Layouts:
+   ->row and columns
+
+
+Basic layout class:
+ .container
+     center and horizontal alignment
+ .container-fluid
+     100% -device full width
+
+............................................................
+Box layout:
+
+Box is  arranged using concept called row and column
+
+bootrp provides row class which identicates a row
+ ->a row can have many columns
+-Class Names 
+   row 
+   column -col
+
+Screen Sizes:
+ Extra small => <div class="col"> => <576px
+ small   =>     <div class="col-sm-200"> 
+	
+<div>
+</div>
+//////////////////////////////////////////////////////////////
+Normal Grid layouts:
+
+
+Containers:
+.container
+.container-flux
+
+
+Example:
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent .container.
+
+
+Breakpoints:
+
+CSS breakpoints are points where the website content responds according to the device width, allowing you to show the best possible layout to the user. CSS breakpoints are also called media query breakpoints, as they are used with media query.
+
+CSS breakpoints are points where the website content responds according to the device width, allowing you to show the best possible layout to the user.
+
+How to Set Breakpoints?
+Breakpoints based on device
+Breakpoints based on content
+
+Eg:
+Device specfic Break points:
+---------- iPhone 6, 6S, 7 and 8 ----------- */
+ 
+/* Portrait */
+ 
+@media only screen
+ 
+and (min-device-width: 375px)
+ 
+and (max-device-width: 667px)
+ 
+and (-webkit-min-device-pixel-ratio: 2)
+ 
+and (orientation: portrait) {
+ 
+}
+ 
+/* Landscape */
+ 
+@media only screen
+ 
+and (min-device-width: 375px)
+ 
+and (max-device-width: 667px)
+ 
+and (-webkit-min-device-pixel-ratio: 2)
+ 
+and (orientation: landscape) {
+ 
+}
+ 
+/* ----------- Google Pixel ----------- */
+ 
+/* Portrait */
+ 
+@media screen
+ 
+and (device-width: 360px)
+ 
+and (device-height: 640px)
+ 
+and (-webkit-device-pixel-ratio: 3)
+ 
+and (orientation: portrait) {
+ 
+}
+ 
+/* Landscape */
+ 
+@media screen
+ 
+and (device-width: 360px)
+ 
+and (device-height: 640px)
+ 
+and (-webkit-device-pixel-ratio: 3)
+ 
+and (orientation: landscape) {
+ 
+}
+
+BREAKPOINTS BASED ON CONTENT
+
+@media only screen (min-width: 768px){
+ 
+...
+ 
+}
+or 
+@media only screen and (min-width: 768px) and (max-width: 959px){
+ 
+...
+ 
+}
+
+WHEN TO USE MIN OR MAX-WIDTH
+
+You can set your breakpoints in different ways using min-width, max-width, or even by combining both. But the question is, when should you use each one? 
+
+To answer it in a simple way, if you are designing your layout with a mobile-first approach, then use min-width breakpoints and work your way up.
+
+"Bootstrap has breakpoints at 576px, 768px, 992px, and 1200px".
+
+Points:
+
+To sum up, CSS breakpoints are a great way to restructure your layout to provide the best user experience across different devices.
+
+Always try to create breakpoints based on your own content, not devices. Break them to a logical width rather than a random width and keep them to a manageable number, so modifying remains simple and clear.
+
+What CSS breakpoints do you use for your layouts? Do let us know in the comments section below.
+
+............................................................
+Mobile First Approach:
+.......................
+BootStrap recommends start design with mobile first
+
+To make the grid responsive, there are five grid breakpoints, one for each responsive breakpoint: all breakpoints (extra small), small, medium, large, and extra large.
+
+col -> col-sm ->col-md ->col-lg
+ 
+col - 270px --->
+
+Refer Table
+
+start with small screen and scalls up to medium screen and large screen.
+
+Note: We need to decide the layout based on content that is best practice.
+
+Eg: equal width for all screens
+
+    <main class="container">
+        <div class="row">
+            <div class="col col-sm col-md col-lg">
+                One of three columns
+            </div>
+            <div class="col col-sm col-md col-lg">
+                One of three columns
+            </div>
+            <div class="col col-sm col-md col-lg">
+                One of three columns
+            </div>
+        </div>
+    </main>
+or
+
+ <main class="container">
+        <div class="row">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+    </main>
+
+
+/////////////////////////////////////////////////////////////
+Responsive Break Points and Styles:
+...................................
+
+<style>
+        /*// Small devices (landscape phones, 576px and up)
+        */
+        @media (min-width: 576px) {
+            div {
+                background-color: greenyellow;
+            }
+        }
+
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            div {
+                background-color: red;
+            }
+        }
+
+        /* // Large devices (desktops, 992px and up)
+        */
+        @media (min-width: 992px) {
+            div {
+                background-color: black;
+                color: whitesmoke;
+            }
+        }
+
+        /* // Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            div {
+                background-color: orange;
+                color: black;
+            }
+        }
+
+        body {
+            background: #e1d8b9;
+        }
+
+        .container {
+            background: whitesmoke;
+        }
+
+        .row {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="row ">
+            <div class="col-4">
+                One of three columns
+            </div>
+            <div class="col-4">
+                One of three columns
+            </div>
+            <div class="col-4">
+                One of three columns
+            </div>
+        </div>
+    </main>
+
+
+
+////////////////////////////////////////////////////////////
+
+Equal Fixed width columns: Mobile first approach
+................................................
+
+Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use .col-4.
+
+Note:
+Column widths are set in percentages, so they’re always fluid and sized relative to their parent element
+
+<main class="container">
+        <div class="row">
+            <div class="col-4">
+                One of three columns
+            </div>
+            <div class="col-4">
+                One of three columns
+            </div>
+            <div class="col-4">
+                One of three columns
+            </div>
+        </div>
+    </main>
+
+...............................................................
+
+Grid Columns And Gutters:
+........................
+
+Each column has horizontal padding (called a gutter) for controlling the space between them.
+
+Columns have horizontal padding to create the gutters between individual columns, however, you can remove the margin from rows and padding from columns with .no-gutters on the .row.
+
+<main class="container">
+  <div class="row no-gutters ">
+            <div class="col-4">
+                One of three columns
+            </div>
+            <div class="col-4">
+                One of three columns
+            </div>
+            <div class="col-4">
+                One of three columns
+            </div>
+ </div>
+</main>
+//////////////////////////////////////////////////////////////
+
+Bootstrap Units:
+
+Grid options
+While Bootstrap uses ems or rems for defining most sizes, pxs are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the font size.
+
+///////////////////////////////////////////////////////////////
+Auto-layout columns
+...................
+
+Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like .col-sm-6.
+
+Equal Size:
+...........
+<div class="container">
+        <div class="row">
+            <div class="col">
+                1 of 2
+            </div>
+            <div class="col">
+                2 of 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col">
+                2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+/////////////////////////////////////////////////////////////
+Setting one column width Fixed and remaining columns fluid in all screens:
+
+ <div class="container">
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col-6">
+                2 of 3 (wider)
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col-5">
+                2 of 3 (wider)
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+///////////////////////////////////////////////////////////////
+Variable width content:
+
+Use col-{breakpoint}-auto classes to size columns based on the natural width of their content.
+
+ <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-2">
+                1 of 3
+            </div>
+            <div class="col-md-auto">
+                Hello 
+            </div>
+            <div class="col col-lg-2">
+                3 of 3
+            </div>
+        </div>
+    </div>
+
+//////////////////////////////////////////////////////////////
+Equal-width multi-row
+
+Create equal-width columns that span multiple rows by inserting a .w-100 where you want the columns to break to a new line. Make the breaks responsive by mixing the .w-100 with some responsive display utilities.
+
+  <div class="container">
+        <div class="row">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="w-100" style="background:chocolate">100</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+        </div>
+    </div>
+//////////////////////////////////////////////////////////////
+Responsive classes
+All breakpoints
+<div class="row">
+  <div class="col">col</div>
+  <div class="col">col</div>
+  <div class="col">col</div>
+  <div class="col">col</div>
+</div>
+<div class="row">
+  <div class="col-8">col-8</div>
+  <div class="col-4">col-4</div>
+</div>
+Stacked to horizontal:
+
+<div class="row">
+  <div class="col-sm-8">col-sm-8</div>
+  <div class="col-sm-4">col-sm-4</div>
+</div>
+<div class="row">
+  <div class="col-sm">col-sm</div>
+  <div class="col-sm">col-sm</div>
+  <div class="col-sm">col-sm</div>
+</div>
+
+Mix and match:
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row">
+  <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+  <div class="col-6">.col-6</div>
+  <div class="col-6">.col-6</div>
+</div>
+
+Alignment:
+.........
+Use flexbox alignment utilities to vertically and horizontally align columns.
+
+Vertical Alignment:
+...................
+
+<style>
+ body {
+            background: #e1d8b9;
+        }
+
+        .container {
+            background: whitesmoke;
+        }
+
+        .col {
+            background: white;
+            border: 3px solid blue;
+        }
+
+        .row {
+            background: pink;
+            height: 100px;
+        }
+</style>
+<div class="container">
+        <div class="row align-items-start">
+            <div class="col">
+                1
+            </div>
+            <div class="col">
+                2
+            </div>
+            <div class="col">
+                3
+            </div>
+        </div>
+        <br>
+        <div class="row align-items-center">
+            <div class="col">
+                1
+            </div>
+            <div class="col">
+                2
+            </div>
+            <div class="col">
+                3
+            </div>
+        </div>
+        <br>
+        <div class="row align-items-end">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+    </div>
+///////////////////////////////////////////////////////////////
+
+Horizontal alignment:
+.....................
+
+<div class="container">
+  <div class="row justify-content-start">
+    <div class="col-4">
+      One of two columns
+    </div>
+    <div class="col-4">
+      One of two columns
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      One of two columns
+    </div>
+    <div class="col-4">
+      One of two columns
+    </div>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-4">
+      One of two columns
+    </div>
+    <div class="col-4">
+      One of two columns
+    </div>
+  </div>
+  <div class="row justify-content-around">
+    <div class="col-4">
+      One of two columns
+    </div>
+    <div class="col-4">
+      One of two columns
+    </div>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-4">
+      One of two columns
+    </div>
+    <div class="col-4">
+      One of two columns
+    </div>
+  </div>
+</div>
+///////////////////////////////////////////////////////////////
+
+Column wrapping:
+
+If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
+
+<div class="row">
+  <div class="col-9">.col-9</div>
+  <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+  <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+</div>
+
+//////////////////////////////////////////////////////////////
+Column breaks
+Breaking columns to a new line in flexbox requires a small hack: add an element with width: 100% wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple .rows, but not every implementation method can account for this.
+
+<div class="row">
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+            <!-- Force next columns to break to new line -->
+            <div class="w-100">xxxx</div>
+
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        </div>
+///////////////////////////////////////////////////////////////
+
+Reordering:
+
+Order classes
+
+Use .order- classes for controlling the visual order of your content. These classes are responsive, so you can set the order by breakpoint (e.g., .order-1.order-md-2). Includes support for 1 through 12 across all five grid tiers.
+
+
+<div class="container">
+        <div class="row">
+            <div class="col order-2">
+                First, but second
+            </div>
+            <div class="col order-12">
+                Second, but last
+            </div>
+            <div class="col order-1">
+                Third, but first
+            </div>
+        </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col order-last">
+      First, but last
+    </div>
+    <div class="col">
+      Second, but unordered
+    </div>
+    <div class="col order-first">
+      Third, but first
+    </div>
+  </div>
+</div>
+////////////////////////////////////////////////////////////
+Margins 
+ <div class="container">
+        <h2>Hello!</h2>
+        <div class="row mt-5 " style="background-color:pink">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+        </div>
+        <div class="row mt-5" style="background-color:pink">
+            <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+            <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+        </div>
+        <div class="row">
+            <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+            <div class="col-auto">.col-auto</div>
+        </div>
+
+    </div>
+///////////////////////////////////////////////////////////////
+Nesting:
+ <div class="container">
+        <div class="row">
+            <div class="col">
+                Level 1: .col-sm-9
+                <div class="row" style="background-color:aqua">
+                    <div class="col-8 col-sm-6" style="border:1px solid black">
+                        Level 2: .col-8 .col-sm-6
+                    </div>
+                    <div class="col-4 col-sm-6" style="border:1px solid red">
+                        Level 2: .col-4 .col-sm-6
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+///////////////////////////////////////////////////////////////
+Column Offset:
+..............
+Setting Empty column space in the left side by moving box right side.
+
+   <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-1" style="background-color:rebeccapurple">
+                <h2>Hello</h2>
+            </div>
+
+        </div>
+    </div>
+
+///////////////////////////////////////////////////////////////
+Use case:
+1.Redesign Sapient Tours using bootstrap layouts.
+2.Redesign Agoda Tour website using bootstrap layouts.
+///////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+

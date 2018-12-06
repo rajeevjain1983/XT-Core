@@ -1,0 +1,3305 @@
+Java Script:
+
+
+History:
+
+1989 - Web was born IN CERN IN europe
+1989 - SUN Created Project called "Green"
+          Portable Application development Platform and        Technology.
+
+1990- Java went for Testing- failed
+
+1991-Java Team invented a model called "Virutal Computing"
+     -JVM-Portablity achived
+1991-Netscap Communication Born for Web 
+      ->Web Agent ->Netscap navigator.
+      ->Sold for money.
+
+1992-93-Java almost stable
+   -SUN -Netscap made agreement for distributing java programs
+ via netscap browser.
+    SUN distributed java client program called "Applets" by embeding via "<applet>" tag.
+       -Dynamic Web
+
+
+  Web Server ------------------------Client
+     |                                  |
+                                   Netscap Browser
+					|
+				       HTML
+    JVM -----------------------------  JVM
+     |                                  |
+ Java Program                         Java Program -Applet
+     |
+ Connectors-JDBC
+     |
+ Data Sources
+
+1994 - The Project APPLET-HTML started failing
+        ->This model not suitable for large scale application
+               ->Security,Conncurrency,Peristency.....
+
+1995-CGI - Dynamic content Technology-c,c++
+
+1996 - SUN Decided to come out from Applet technology to move
+ the language on DCT-J2EE Spec1.0-Servlet,JSP.
+
+1996 - MS Released the OS Called Window 96
+         ->Web Agent called internet Explorer - Free....
+
+
+1995 -96 -  Nets cap was thinking about how to improve the
+            browser.
+
+1995 -May -Netscap board of directors had meeting , decision           was made that how participate in dynamic web.
+       The wanted to be in the client side market only.
+       They wanted java like powerfull programming language but        not java.
+
+
+
+Ten days in May 1995 "Mocha"
+September 1995 "Live Script"
+December 1995 "Java Script"
+1996-1997 :ECMA-262 Ed.1 aka ES1
+1999 - ES3 Modern JS Baseline
+2005- The Ajax Revolution
+2008-ES 4 RIP, Harmony founded in July
+2009-ES 5 "use Strict" JSON,Object.create...
+2012-ES6 : modules,let,proxies ...
+2015-July ES6 implemented in All browsers...
+2016 – ES 7 Under proposal
+Still growing......
+..............................................................
+Javascript:
+
+ It is programming language
+
+Types of PL
+ ->GPL - Language used for building applications for most of the domain. c,c++,java,C#
+ ->DSL -Language designed for building one domain
+   -html,css,javascript but only in begining
+
+Structure of PL:
+
+ paradigm : The way or style or pattern.
+
+cs paradigm:                implementations
+  Procedural     -          c
+  oop            -          c++,java,c#
+  fp             -          scheme,javascript
+  event driven  -          java,c++
+
+Hybrid 
+ ob + fp + event   =       jAVASCRIPT
+
+Javascript is functional,object based,event driven Programming language.
+
+Phases of PL:
+
+1.PL will help to create program - High level language - source  code.
+
+Hello.cpp =>compile => executable code
+                      
+
+Layer 1 :
+Hello.c
+#include<stdio.h>
+
+void main(){
+ println("hello")
+}
+|
+compile
+|
+x compiler
+
+#include<stdio.h>
+
+void main(){
+ println("hello");
+}
+void println(char *data,....){
+   winOS_println(data,.....)
+}
+............................................................
+Layer : 2
+
+   Runtime / Execution Engine
+ 
+Runtime itself is program written in c / c++ supplied by language vendors or any one who are interested to provide that.
+..............................................................
+
+Layer 3 : Operating system : windows | Linux | Mac
+
+...........................................................
+
+Layer 4: HAL
+
+.............................................................
+
+Layer 5: Hardware
+
+..............................................................
+
+Note : if you want to execute the program, first you need to initalize the runtime.
+
+.........................................................
+Language provides toolkit: sdk
+  compilers,built in apis,runtime,other tools
+
+Java script:Netscap: toolkit.
+
+Javascript:
+Complier and Runtime ,built in libs are distributed in two modes.
+
+1.Embeded mode
+    Embeded inside other softwares
+
+Javascript platform(compilers+libs+runtime) is embeded into browsers,Inside Mobile,Inside desktop,inside any device.    
+
+2.standalone mode
+
+Node.js
+
+All host env who must implement ecma spec.
+
+Browser js platform and its name:
+Firefox - SpiderMonkey -c
+Chrome   -V8 -C++
+IE -Chakra
+
+Node platform:
+google V8.
+
+How to compile Javascript  and Run?
+
+Take V8 Model
+
+Source code(index.js)---->HTML (script)--->Browser
+            |
+            script------>Script Platform (v8)
+			   |
+			   Loader
+			   |
+			 Parser
+			   |
+			Symobal Tree
+			   |
+		       Intrepreter + JIT
+                          |
+                      line by line assembly generation	
+			  |
+		   Call into Runtime
+
+
+
+Parser:
+   It is  a special compiler,converts source code into "symbol tree which is string representation"
+
+.............................................................
+JS Spec: ES Spec :ECMA Spec:
+
+ES 1.0
+ES 3.0
+ES 4.0
+ES 5.0
+<------------------------------------->
+ES 6.0
+ES 7.0
+........................................................
+ES Spec Topics: *5,6
+
+1.Language fundamentals
+2.Functions
+3.Object based Programming
+4.DOM Programming
+5.Network && http Programming(Ajax)
+..............................................................
+Project Setup:
+  JS-APPS
+    |
+    src
+     
+  index.html
+
+
+1.Language fundamentals
+
+1.1.Variables and typesystem
+1.2.Literals
+1.3.operators
+1.4.control structures 
+1.5.loops    
+	     
+1.1.Variables,type system,literals:
+...................................
+Javascript is dynamic language.
+Javascript is weakly typed language.
+   =>Type system rules not applied during compile time phase.
+
+Variable declaration:
+
+var | let | const | this  = value;
+|       |    |       |
+ES 5  ES 6  ES 6   ES 5 + ES 6
+
+Value: Literals
+ string,number,boolean,undefined,NaN,Infinity,function,null,object.
+
+string:
+
+  1.Sequence of 0 or more 16-bit characters
+  2.No separate character type
+  3.Characters are represented as strings with    a length of 1
+  4.Strings are immutable
+  5.Similar strings are equal ( == )
+  6.String literals can use single or double quotes,triple(es   6)
+  7.Strings are objects
+
+
+
+/**
+ * Strings
+ */
+var name = "Subramanian";
+var city = 'Chennai';
+
+var doc = "<html>" +
+    "<head>" +
+    "<body>" +
+    "</body>" +
+    "</html>";
+
+var desc = `Subramanian has been working in 
+            IT last 18 years 
+            He has done various
+            projects and trainings
+
+`; //backtic,template literal
+console.log("Name " + name);
+console.log('City ' + city);
+console.log(doc)
+console.log(desc);
+console.log(`Name ${name} `);
+console.log(`City ${city} `);
+
+
+
+
+............................................................
+ES 6 and Browsers:
+
+1.ES 6 is just spec, must have been implemented by browsers
+
+2.When ES 6 was proposed At 2012, most of the browsers were not
+ ready to implement es 6.
+
+Browser ES 6 compabilty matrix:
+
+String Template literal
+
+ IE Chrome Ff
+ X   K     K
+
+
+How to run code in IE?
+ Polyfills
+     Polyfills are wrappers for nonsupporting features.
+
+Solution:
+  Every browser supports ES5-most stable.
+
+Transpiler (Compiler):
+  Compiler which emits only source code
+  source code to source compilation
+ google created a compiler called  "traceur"
+babel.js compiler(transpiler)
+
+
+
+
+
+
+2.Number:
+
+        Only one number type
+        No integers
+        64-bit floating point
+        IEEE-754 (aka “Double”)
+
+	var price=100;
+
+
+
+Type conversion:
+javascript supports type conversion.
+  string ---to---number.
+
+Types of conversion:
+1.Implicit conversion
+    Conversion is done automatically
+2.Explicit conversion
+    Conversion is done via conversion api
+  parseInteger,parseFloat
+
+
+//Numbers
+var price = 10;
+console.log(`The Price is ${price}`)
+var lightSpeed = 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999990000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+console.log(lightSpeed);
+
+var stockValue = 89.7890;
+console.log(stockValue);
+
+var hexValue = 0xFF;
+console.log(hexValue);
+
+var qty = "10";
+//implicit conversion
+var totalPrice = price * qty;
+console.log(`Total Price ${totalPrice}`);
+//explicit conversion
+var tPrice = parseInt(qty, 10) * price;
+console.log(tPrice);
+
+boolean:
+
+var isActive = true;
+var isEnabled = false;
+var hidden = true;
+
+console.log(`IsActive ${isActive}`);
+console.log(`isEnabled ${isEnabled}`);
+console.log(`hidden ${hidden}`);
+
+undefined:
+    var price;
+    console.log(price);
+  if variables does not assign any " valid literal"(value)
+  then the variable will have "undefined".
+
+NaN : Not a Number:
+=>Special number: Not a Number
+=>Result of or erroneous numeric operations
+=>Toxic: any arithmetic operation with NaN as an 
+=>NaN is not equal to anything, including NaN
+
+NaN  Use cases:
+
+1.if operand has undefined literal
+//if variables has undefined
+var x;
+var y;
+var result = x * y;
+console.log(result);
+
+var price = 10;
+var qty;
+var totalPrice = price * qty;
+console.log(totalPrice);
+
+2.if type conversion error
+
+//var stockValue = parseFloat("$100.89");
+//var stockValue = parseFloat("100.89#");
+var stockValue = "100.89$";
+var totalStock = 13;
+var amount = stockValue * totalStock;
+console.log(amount)
+
+
+//Infinity
+var score = 98;
+var avg = score / 0;
+console.log(avg);
+
+...............................................................
+
+Boolean values:
+
+In javascript many values are false falsy values,execpt those
+values every thing is true.
+
+Falsy values:
+1.boolean value false
+2.0
+3."" , '' (empty string)
+4.undefined
+5.NaN
+6.null
+ Except these values everything is true /truthy.
+
+Handson:
+1.experiment false and truthy values:
+..............................................................
+Operators:
+
+Addition  +
+
+Subtraction - 
+
+Division  /
+
+Multiplication  *
+
+Remainder %
+
+Exponentiation **
+
+.......................
+Increment ++
+Decrement --
+..................................
+
+Assignment 	x = y 	x = y
+
+Addition assignment 	x += y 	x = x + y
+
+.................................................
+Comparasion & logical
+  ==
+     Test values
+  ===
+    Test value(content) + type
+Best coding practice:
+  Use always  "==="
+  !=
+  !==
+  <,>,<=,>=,!,!!
+..............................................................
+|| and &&
+
+Based on boolean values  or boolean expressions
+.
+// ||
+var isWorking = true;
+var hasProject = true;
+var workStatus = isWorking || hasProject;
+console.log(workStatus);
+
+/**
+ * if first operand is truthy the result is first,else the seconde operand
+ */
+
+var greetings = "";
+var message = greetings || "hello";
+console.log(message);
+...........................................................
+Tenary Operator:
+   condition ? exprT : exprF 
+
+Object creator 
+ new 
+
+Object initializer : {}
+
+Property accessors 
+  . []
+
+instanceof
+	
+Delete Operator
+ delete
+
+in operator : Relfection
+  It is used to iterate object
+
+Destructuring assignment operators (es6)
+  ...
+
+Spread Operator:(es 7 operator)
+...
+
+..........................................................
+
+
+To know the type of operator:
+.............................
+typeof
+  ->typeof operator returns data type in string 
+  ->typeof operator returns data type in small case (eg number,string,object,function,undefined).  
+...........................................................
+function opeators:
+ function* fnName(){} =>Generators
+
+..........................................................
+Array Operators:
+ [] =>Index operator
+Iterators:
+ for...of => iterates based on values
+ for...in => Iterates based on keys
+............................................................
+Constrol structure: similar to c language
+..................
+if(boolean){}
+if...else {}
+if else if...{}
+
+switch case
+switch case can work any type...
+switch..with break
+
+case ex:
+    code to be executed
+    break;
+
+case with return;
+
+
+case ex:
+    return code to be executed
+    break;
+
+case 
+
+case
+
+case
+
+..............................................................
+Loops : similar to c language:
+
+for...
+  for(var i=0; i<10;i++){
+
+ }
+while,do...while
+//operators
+//basic operator
+var x = 10;
+var y = 20;
+//+
+console.log(`+ ${x + y}`);
+console.log(`- ${x - y}`);
+console.log(`* ${x * y}`);
+console.log(`/ ${x / y}`);
+console.log(` % ${x % y}`);
+console.log(`** ${x ** y}`);
+console.log(`++ ${++x}`);
+
+//assigment
+var result = (x += y); //	x = x + y
+console.log(result);
+///////////////////////////////////////////////////////////
+var price = 100;
+var todayprice = 100;
+//var status = price == todayprice;
+var status = price === todayprice;
+console.log(status);
+
+var stockvalue = "100";
+var todayValue = 100;
+//var stockStatus = stockvalue == todayValue;
+var stockStatus = stockvalue === todayValue;
+console.log(stockStatus);
+
+//Comparsional operator
+var a = 40;
+var b = 30;
+var isBig = a > b;
+if (isBig) {
+  console.log("A is Big");
+} else {
+  console.log("B is Big");
+}
+////////////////////////////////////////////////////////////
+// ||
+var isWorking = true;
+var hasProject = true;
+var workStatus = isWorking || hasProject;
+console.log(workStatus);
+
+/**
+ * if first operand is truthy the result is first,else the seconde operand
+ */
+
+var greetings = "";
+var message = greetings || "hello";
+console.log(message);
+
+//you can try with and operator
+
+/////////////////////////////////////////////////////////////
+var age = 19;
+var eligibility = age >= 18 ? "adult" : "minor";
+console.log(eligibility);
+var counter = 0;
+var score = counter ? "You won" : "You lost";
+console.log(score);
+
+///////////////////////////////////////////////////////////
+//typeof variable   typeof(variable)
+var num = 1;
+var str = "hello";
+var bool = true;
+var un;
+var naNRes = 100 * un;
+var infRes = 100 / 0;
+var fn = function hello() {};
+var obj = { id: 1 };
+var nullRes = null;
+console.log(`The Type of num is ${typeof num}`);
+console.log(`The Type of str is ${typeof str}`);
+console.log(`The Type of bool is ${typeof bool}`);
+console.log(`The Type of undefined is ${typeof un}`);
+console.log(`The Type of NaN is ${typeof naNRes}`);
+console.log(`The Type of Infinity is ${typeof infRes}`);
+console.log(`The Type of Function is ${typeof fn}`);
+console.log(`The Type of Object is ${typeof obj}`);
+console.log(`The Type of null is ${typeof nullRes}`);
+/////////////////////////////////////////////////////////////
+
+var actionType = "add";
+switch (actionType) {
+  case "add":
+    console.log("add is called");
+    break;
+  case "multiply":
+    console.log("multiply is called");
+    break;
+  default:
+    console.log("No match Found");
+}
+if (actionType === "add") {
+  console.log("add is called");
+} else if (actionType === "multiply") {
+  console.log("multiply is called");
+} else {
+  console.log("No match Found");
+}
+///////////////////////////////////////////////////////////
+var step;
+for (step = 0; step < 5; step++) {
+  // Runs 5 times, with values of step 0 through 4.
+  console.log(`Walking step by step ${step}`);
+}
+............................................................
+let,const:
+
+let :  
+
+let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope.
+
+let is equal to var only.
+
+let myname = 'Subramanian';
+let age = 18;
+let isActive = true;
+let salary;
+let avg = 100 / 0;
+console.log(myname, age, isActive, salary, avg);
+
+const:
+  const is read only.
+  once the variable is initalized with value , cant be   reinitlzed
+  const declaration cant have undefined.
+
+const pi = 3.14;
+//pi = 9000.90;
+console.log(pi);
+
+//explcit undefined 
+//const STATUS = undefined;
+//implicit undefined will throw error
+//const STATUS;
+//null
+const employee = null;
+employee = 100;
+..............................................................
+
+functions:
+
+What is function?
+ Collection of statments under single unit.
+old terminally: procedures
+
+Code organize:
+Based on domain (problem space)
+  
+
+............................................................
+
+Functions:
+ ->Basic function syntax
+ ->Function as literal
+    ->Async /Sync programming =>callback functions
+    ->Closures
+    ->Curry functions
+    ->function context
+ ->Function as Object template
+
+Function roles:
+1.function as "unit of execution".
+2.function as parameter /callback functions=>async
+3.function inside another function =>closure
+4.function returns another function =>curry
+5.function used as object template =>Object/Constructor function
+
+note: roles are decided during runtime,semntatically decided
+during source code.
+
+Function syntax and coding standards:
+
+1.function as "unit of execution".
+    ->should called like bellow
+    ->Naming standards: verb or verb+noun
+		  add or say+Hello
+	 
+Runtime: sayHello() / sayHello.call(),sayHello.apply(),sayHello.bind();
+
+
+Functions and arguments and parameters:
+....................................... 
+
+Rule:
+You can pass any literal including function.
+You can return any literal including function.
+
+
+Javascript args:
+if you dont pass any arg, it will be undefined
+incase if the variable has undefined , if you do computation
+then it will give error.
+
+How to prevent run time errors?
+
+by providing default values
+ using  || operator =>ES 5
+ Using es6 default arg =
+
+//a,b is arg
+function add(a = 0, b = 0) {
+    /* a = a || 0;
+    b = b || 0; */
+    const result = parseInt(a) + parseFloat(b);
+    console.log(result);
+}
+
+Use case: i want to pass more parameters but i dont know 
+how many? var args
+
+Rest vs arguments:
+
+1.Rest parameters are only the ones that haven't been given a separate name (i.e. formally defined in function expression), while the arguments object contains all arguments passed to the function;
+
+2. The arguments object is not a real array, while rest parameters are Array instances, meaning methods like sort, map, forEach or pop can be applied on it directly;
+
+function sayHello() {
+    console.log('SayHello')
+}
+sayHello();
+sayHello.call();
+
+////////////////////////////////////////////////////////////
+//a,b is arg
+function add(a = 0, b = 0) {
+    /* a = a || 0;
+    b = b || 0; */
+    const result = parseInt(a) + parseFloat(b);
+    console.log(result);
+}
+//parameter
+add(10, 10);
+add();
+add("10", 10);
+add("10", "10");
+add(12, 333, 333);
+//return 
+
+function substract(a, b) {
+    return a - b;
+}
+const result = substract(10, 1);
+console.log(result);
+
+function isValid() {
+    return;
+}
+const status = isValid() ? 'Valid' : 'Not Valid'
+console.log(status);
+
+function login(userName, password) {
+    if (userName === 'admin' && password === 'admin') {
+        return true;
+    }
+    return;
+}
+const isLoggedIn = login('admin', 'admin') ? 'Ok' : 'NotOk';
+console.log(isLoggedIn);
+
+//Rest Operator
+function log(...args) {
+    // console.log(arguments);
+    console.log(args)
+}
+log('hello');
+log('hai', 'welcome', 'greet', 'test', 'how are you')
+
+function doWeblog(page, ...args) {
+    console.log(page, args);
+}
+doWeblog('productPage', 13, 'Test', 90, )
+doWeblog('loginPage', 'admin', 'admin');
+
+............................................................
+Use Case:
+Create console based calcultor to demonstrate core javascript
+concepts such as variables,literals,operators,function parameters and args.
+
+.............................................................
+
+Function expression: Function as literal:
+.........................................
+
+In javascript, functions are values like other values.
+const i =10;
+
+Since functions are values,you can intialize the function
+to a variable.
+
+The variable is acting as pointer to that function.(function pointers).
+
+The variable has ability
+  ->to invoke that function.
+
+How to initalize the function to a variable?
+
+We have many ways
+
+//way 1
+function sayHello() {
+    return 'Hello'
+}
+const hello = sayHello;
+console.log(hello());
+
+//way 1
+function sayHello() {
+    return 'Hello'
+}
+const hello = sayHello;
+console.log(hello());
+console.log(sayHello())
+
+//way 2: : inline assigment : named function
+const hi = function sayHai() {
+    return 'hi'
+};
+//console.log(hi(),sayHai());
+console.log(hi());
+
+//way 3: inline assignment:anonymous function
+const greet = function () {
+    return ''
+};
+
+//Way 3: with args and parameters
+const add = function (a = 0, b = 0) {
+    return a + b;
+};
+console.log(add(10, 10));
+
+///Function literal in ES 6 : Lamda functions:
+     => fat arrow: arrow functions
+
+//Arrow:
+
+const greet = () => {
+    console.log('greet');
+};
+greet();
+
+//suppose if i have only one line of body
+const hi = () => console.log('hi');
+
+//Args and parameters:single arg + without default arg
+//const greetMe = (name) => console.log(name);
+/* const greetMe = name => console.log(name);
+greetMe('Subramanian'); */
+//Args and parameters:single arg + default arg
+const greetMe = (name = 'name') => console.log(name);
+greetMe('Subramanian');
+//more than one parameter with or without default arg
+const getDetails = (name = 'name', age = 18, city = 'city') => console.log(name, age, city)
+getDetails();
+
+//return values:
+
+const add = () => {
+    return 10 + 10;
+};
+console.log(add());
+//if function returns only value/variable/expression , no more body.you can skip, {} and return statement
+
+const substract = () => 10 - 10;
+console.log(substract());
+//if function gets single param without default arg and return the same
+const isActive = active => active;
+console.log(isActive(true));
+const toogle = hidden => !hidden;
+console.log(toogle(true));
+//if no args and parameters:empty brackets
+const tap = _ => console.log('fetching records');
+tap();
+.............................................................
+Object based Programming:
+ 
+Object oriented Programming Principles:
+->Abstraction
+->Encapsulation
+->Typing
+->Hierachy
+->Modularity
+------------------------
+->Concurrency
+->Persistency
+
+if language implements the first five principles, which is called "Object oriented Programming language".
+
+if any one is not implemented or partially implemented the language is called "Object based programming language".
+
+
+Javascript is object based PL.
+
+Object:
+->Dynamic memory
+
+Program:
+   1.Passive
+       The program which cant be accessed by CPU.
+       The program which is not in Main Memory.
+   2.Active
+       The program which can be accessed by CPU.
+       The program which is in Main Memory
+
+
+Global Object:
+
+V8--->GlobalObject | Execution Context:
+
+ -> It is object which is container for your code.
+
+class GlobalObject{
+
+}
+new GlobalObject();
+
+Phases of Javascript Executable code:
+
+1.initalization
+    code is initalized inside Global object /EC
+2.Execution Phase
+
+
+1.initalization
+variables are initalized with default value called "undefined".
+
+EC = [ 
+ CODE1...
+ CODE2...
+ CODE 3....
+ 
+]   
+Code types:
+1.variables
+   variables
+
+var x = 10;
+var y = 89;
+
+console.log(z);
+
+function test() {}
+var z = 90;
+
+function doStuff() {
+
+}
+var a = 10;
+
+var context =window={
+
+ vo: {
+    x:10,
+    z:33,
+    a:90,	
+  }
+
+}
+2.functions code
+
+ 1. a new execution context is created - Sub-context
+    context->Object
+ 2. function itself is object
+ 3. Every function forms context
+ 
+  
+3.eval instructions
+   eval() ->Evaulation api /function which also creates a context
+
+...........................................................
+
+Execution Phase:
+-->Execution begins by calling main function.
+   Note: JS has no explcit main function,supplied by runtime.
+-->put that main function bottom of stack
+
+
+
+Points:
+1. all variables and function context is created during initalization phase
+2. Variables get values and function context gets life during
+  execution phase.
+3.Functions
+	Function context can be created during intialization         phase and also execution phase. 
+    if function is assigned to a variable,(function     expresison/literal pattern), context object for that    function is created during execution.
+.............................................................
+     
+Lexical environment: A lexical environment is a structure used to define association between identifiers appearing in the context with their values.
+  Each environment can have a reference to an optional parent environment. 
+
+->So an environment is a storage of variables, functions, and classes defined in a scope.
+
+
+->Technically, an environment is a pair, consisting of an environment record (an actual storage table which maps identifiers to values), and a reference to the parent (which can be null).
+
+
+............................................................
+Environment and Context Relationship:
+
+let x = 10;
+let y = 20;
+ 
+function foo(z) {
+  let x = 100;
+  return x + y + z;
+}
+ 
+foo(30); // 150
+
+
+..........................................................
+
+Rules:
+if a variable is not found in the own environment, there is an attempt to lookup it in the parent environment, in the parent of the parent, and so on — until the whole environment chain is considered.
+
+Identifier resolution: the process of resolving a variable (binding) in an environment chain. An unresolved binding results to ReferenceError. 
+
+
+
+function createCounter() {
+  let count = 0;
+ 
+  return {
+    increment() { count++; return count; },
+    decrement() { count--; return count; },
+  };
+}
+ 
+let counter = createCounter();
+ 
+console.log(
+  counter.increment(), // 1
+  counter.decrement(), // 0
+  counter.increment(), // 1
+);
+
+Closure: A closure is a function which captures the environment where it’s defined. Further this environment is used for identifier resolution.
+............................................................
+Object:
+->Object is collection of properties.
+
+How to create Objects in javascript?
+
+Unlike other languages,javascript does not have class semantics(dont compare with ES 6 Class).
+
+rather than functions:
+  ->Functions are used to create objects.
+
+Functions:
+  ->constructor function
+       ->constructor pattern
+  ->Object function ->Base Object in javascript.
+      ->literal pattern
+
+Object charactertics:
+
+Object can have three things
+1.state => data => instance variables
+2.behavior =>methods =>instance methods
+3.identity =>data to indentify object =>instance variables
+
+Javascript Object contains state,behavior,identity  which are represented by keyword called "this"
+
+this
+  =>implicit pointer variable to point the object(current)
+  =>hidden pointer which is injected by runtime when ever    object is created.
+We have many hidden properties which are injected by runtime
+1.__proto__
+      property whose value is object
+
+Object layout:Internal Structure of Object:
+............................................
+
+How to know the prototype(Parent) of an Object?
+
+Two views:
+1.From Function Object perspective:Context Level
+    FunctionName.prototype
+console.log(Employee.prototype);
+
+2.From Instance Perspective:Runtime
+emp.__proto__
+Api: Object.getPrototypeOf(emp)
+////////////////////////////////////////////////////////////
+
+Instance members:
+................
+
+/**
+ * If function is for Object template then name should be   noun
+ * Data initalization:
+ *  ->hardcoded
+ *  ->after object creation
+ *  ->during object creation: constructor parameters
+ */
+function Employee(id = 1, name = 'default', salary = 1) {
+    //instance members;
+    this.id = id; //1;
+    this.name = name; //'Subramanian';
+    this.salary = salary; //1000;
+    //methods
+    this.calculateSalary = function () {
+        return 1000 * this.salary;
+    }
+}
+let emp = new Employee();
+//how to log /get  object properties
+// object access properties . []
+emp.name = 'ram';
+console.dir(emp);
+console.log(emp.id, emp.name, emp.calculateSalary());
+
+//constructor parameters
+let emp1 = new Employee(12, 'Subramanian', 8889);
+console.log(emp1);
+/////////////////////////////////////////////////////////////
+//Literal pattern
+let customer = {
+    id: 1,
+    name: 'ram',
+    calculateInvoice: function () {
+        return 100;
+    }
+};
+customer.name = 'subramanian';
+console.log(customer.id, customer.name, customer.calculateInvoice());
+
+//////////////////////////////////////////////////////////
+//ES 6 Class : to create Object
+
+class Account {
+
+    constructor(id = 1, name = 'default') {
+        this.accountNo = id; //1;
+        this.name = name; //'Subramanian';
+
+    }
+    withdraw() {
+        return 'With draw';
+    }
+    deposit() {
+        return 'deposit';
+    }
+}
+let account = new Account();
+// console.dir(account);
+console.log(account.accountNo, account.name, account.withdraw(), account.deposit());
+////////////////////////////////////////////////////////////
+
+Why javascript uses dictionary model to create objects?
+->Javascript is dynamic lanaguage
+   during runtime you can expand /shrink object
+
+Object augmentation:
+  -properties can be added,updated,deleted,iterated during runtime.
+  How because object is dynamic data structure-Map.
+
+How to add properties to an Instance Level?
+
+//Object augmentation: instance level
+//Object from function,literal,class can be augumented.
+
+//Empty object
+function Employee() {}
+const emp = new Employee();
+//Augmentation:Add
+emp.id = 1;
+emp.name = 'subramanian';
+emp.salary = 89;
+emp.calcualteSalary = function () {
+    return 333;
+}
+//Augmentation:update
+emp.name = 'Ram';
+emp.department = 'software'
+
+//Augmentation:delete
+delete emp.salary;
+
+//Augmentation : iteration
+for (var e in emp) {
+    console.log(` ${e} :  ${emp[e]}`);
+}
+
+console.log(emp);
+console.log(emp['name'], emp.name);
+
+const emp1 = new Employee();
+console.log(emp1);
+//literal object creation:
+const acc = {};
+//adding properties
+acc.id = 1;
+acc.name = 'subramanian'
+acc.balance = 1000;
+acc.interest = 8.9;
+console.log(acc);
+//or
+const account = new Object({
+    id: 1,
+    name: 'subramanian'
+});
+//augementing existing Object
+// account.id = 1;
+// account.name = 'Subramanian'
+console.log(account.id, account.name);
+
+console.dir(account);
+//////////////////////////////////////////////////////////////
+
+Static and Dynamic Programming: this
+
+this -> is a variable(identifier)
+a - is also variable (identifer).
+
+Variable Naming Binding with value:
+....................................
+Scope: visibility of variables ,where it is visible
+         when visibility of a variable is activated.
+   during parsing time or execution time?
+
+
+Three scopes in general: Based on variable binding
+1.static scope /Lexical scope
+2.dynamic scope
+3.Augmented scope - deprecated
+
+1.static scope:
+
+Definition 1:
+ A language implements static scope, if only by looking at the source code one can determine in which environment a binding is resolved.
+
+How to implement lexical scope / static scope :
+
+Use case:1 variable binding is resolved at function scope
+
+var a = 10;
+
+function print_a() {
+    console.log(a);
+}
+
+function run() {
+    var a = 100;
+    print_a()
+}
+run();
+
+ variable x for the print_a function is free, since it’s neither a parameter, nor a local variable of this function.
+
+
+In the example above we see, that variable a is captured when "print_a function is created". And local variable a of the run function doesn’t affect execution of the print_a function.
+
+
+Use case 2:Closures
+..................................................
+
+Dynamic scope: Variable binding:
+
+The dynamic scope specifically for variables is not widely used on practice today.
+
+Definition : 
+   Dynamic scope: a language implements dynamic scope, if a caller defines an activation environment of a callee.
+ 
+
+caller =>Object
+callee =>function
+
+Defintion:
+ This value:
+    in JavaScript this value is dynamically scoped
+    
+  That’s correct: as we know, the value of this is determined and provided exactly by the caller
+   
+"The function binding is decided on object decided dynamically".     
+
+
+Points:
+1.in non strict mode , this bound to window , I mean sayHello
+ is bound on window object by default. 
+2.In strict mode, this bound is decided by us based on object 
+  binding , meaning that function is free from any Object  binding default : this is recommended.
+
+
+Think: can "this" be bound with function "Creation phase"  
+       or can "this" be available in lexical scope?
+       or can "this" be available in static scope?
+
+
+Use case 1 : how to bind function dynamically  | how to initalze "this" dynamically"
+
+How to call function on objects dynamically?
+
+Function object provides  function binding apis
+1.call
+2.apply
+3.bind
+
+
+1.call(target,parameter1,parameter2...)
+
+function getCordinate(...name) {
+    console.log(`${name} => x is ${this.x} y ${this.y}`)
+}
+//No caller/ No target / No owner
+///getCordinate();
+//binding on Map
+const map = {
+    x: 1000,
+    y: 3888
+}
+getCordinate.call(map, 'Google Map', 'google');
+//window cordinates
+window.x = 999;
+window.y = 900;
+getCordinate.call(window, 'Browser Window', 'Chrome');
+
+
+2.apply(target,array)
+
+  apply second arg is array, when we pass array, the function
+  does not take array as input(arg type is not array).
+
+function getStocks(...stocks, ...strings) {
+    console.log(`${this.name}`)
+    console.log(stocks, strings);
+}
+const stocks = [{
+    id: 1,
+    value: 34
+}, {
+    id: 2,
+    value: 67
+}]
+const obj = {
+    name: 'sapient'
+};
+getStocks.apply(obj, stocks, ['ts', 'test']);
+
+function myfun(arr) {
+    console.log(arr);
+}
+myfun([12, 88, 90, 90, 78]);
+///////////////////////////////////////////////////////////////
+var functionRef=bind(target,params);
+
+Lazy invocation: the function is not becoming stack frame rather we take copy of the function along with target binding.
+
+...............................................................
+this: inside nested scope
+............................
+
+const training = {
+    name: 'subramanian',
+    teach: function () { //<--global scope
+        console.log('teach', this.name);
+        // let self = this;
+        /*  return function () { //learnscope<--- <---teachscope<---global scope
+             //console.log('learn :', this.name);
+             //console.log('learn', training.name);
+             //with call
+             //console.log('learn', this.name);
+             //with self convention
+             console.log('learn', self.name);
+         }; */
+        //learn();
+        //learn.call(training)
+        //learn();
+        //return learn;
+        return () => {
+            console.log('learn', this.name);
+        }
+
+    }
+};
+let learn = training.teach();
+learn();
+..............................................................
+
+How to pass function as parameter ? function args:
+
+Nested Function,callback hell :
+
+Callback hell is context when many functions nested.
+Callback hell is just word coined late 2005.
+
+How to write better nested functions?
+ Design pattern : Promise
+Promise is design pattern created by jquery team,in order to write wrapper around nested functions.
+
+The first promise implementation provided as part of jquery lib.
+Many promise libs are available.
+
+In 2012 , ECMA Team added Promise spec as part of ES 6.
+
+Browser vendors started give Promise implementation after 2015.
+
+ES 6 Promise Object:
+
+apis:
+then,catch,finally
+
+'use strict'
+
+
+const getUser = () => {
+    let mockUser = {
+        name: 'admin'
+    };
+    return new Promise((resolve, reject) => {
+        if (mockUser) {
+            resolve(mockUser);
+        } else {
+            reject({
+                err: 'something went wrong'
+            })
+        }
+    });
+};
+/* const promise = getUser();
+promise.then(functi  on (response) {
+    console.log(response)
+})
+promise.catch(function (err) {
+    console.log(err);
+}) */
+getUser()
+    .then(response => login())
+    .catch(err => console.log(err));
+
+
+// String str="test".toString().trim().toUpperCase()
+
+
+..............................................................
+Object Destructuring:
+.....................
+ES 6 features for object property extraction.
+
+
+"use strict";
+
+//Object Destructuring
+
+function getEmployee({ id, name, salary }) {
+  //ES 5 PATTERN
+  /* const id = employee.id
+    const name = employee.name
+    const salary = employee.salary */
+  //ES 6 pattern
+  //   const { id, name, salary } = employee;
+
+  console.log(`Id ${id}`);
+  console.log(`Name ${name}`);
+  console.log(`Salary ${salary}`);
+}
+
+getEmployee({
+  id: 1,
+  name: "subramanian",
+  salary: 100
+});
+/////////////////////////////////////////////////////////////
+//Object Destructuring : with returning object
+
+// const getStocks = () => {
+//   return {
+//     id: 1,
+//     value: 100,
+//     symbol: "NSF"
+//   };
+// };
+
+// const getStocks = () => ({
+//   id: 1,
+//   value: 100,
+//   symbol: "NSF"
+// });
+// console.log(getStocks());
+//Object Destructuring : with returning object + inputs
+
+// const getStocks = (id, value, symbol) => ({
+//   id: id,
+//   value: value,
+//   symbol: symbol
+// });
+
+//both key and identifier is same, make it one
+const getStocks = (id = 1, value = 0.0, symbol = "DFD") => ({
+  id,
+  value,
+  symbol
+});
+console.log(getStocks(3, 900, "DSF"));
+
+//Nested Object Destructuring
+const getCustomers = ({ id, address: { city, state } }) => {
+  //   console.log(id, address.city);
+  console.log(id, city, state);
+};
+const customer = {
+  id: 1,
+  address: {
+    city: "Delhi",
+    state: "HR"
+  }
+};
+getCustomers(customer);
+...............................................................
+Object hierarchy:
+................
+ ->Object Relationships.
+    ->HAS-A  - Design pattern IOC,Dependency injection.
+    ->IS-A  - Inheritance
+
+Note: Objects are linked during runtime.
+
+HAS-A
+->loosly copuled systems
+  ->independant objects connected.
+//ES 5 Syntax
+function Address(doorno = '1', street = 'street', city = 'city', zipcode = 'zipcode', state = 'state') {
+    this.doorno = doorno;
+    this.street = street;
+    this.city = city;
+    this.zipcode = zipcode;
+    this.state = state;
+}
+
+function Animal() {
+
+}
+
+function Employee(id = 1, name = 'name', address = new Address()) {
+    this.id = id
+    this.name = name;
+    this.address = address;
+}
+let emp = new Employee();
+console.log(emp.id, emp.name, emp.address.city)
+
+let address = new Address('1', '10thstreet', 'DEL', '9999', 'HR')
+let employee = new Employee(89, 'subramanian', address);
+
+let a = new Animal()
+let emp2 = new Employee(4, 'test', a)
+/////////////////////////////////////////////////////////////
+
+class Order {
+    constructor(orderid = '00AA', value = 0) {
+        this.orderid = orderid;
+        this.value = value;
+    }
+}
+class Customer {
+    constructor(id = 1, name = 'name', order = new Order()) {
+        this.id = id;
+        this.name = name
+        this.order = order;
+    }
+}
+//UI
+class CustomerComponent {
+    constructor() {
+        console.log('Customer UI is called')
+    }
+    render() {
+        let order = new Order('Q001', 1000.98);
+        let customer = new Customer(2, 'Subramanian', order);
+        console.log(customer);
+    }
+}
+new CustomerComponent().render();
+............................................................
+IS-A relationship: Inheritance:
+
+1.Javascript is object inheritance =>Prototype Model
+  -Every Object will have a default parent object called    "Prototype"
+
+Inheritance:
+ Objective: Code Resue
+
+The Object must not have common properties across multiple similar "instance"
+Common data must be kept inside "prototype" i mean parent object.
+
+Every object is linked with its parent object via a property
+"prototype" / "_proto_"
+
+prototype is standard property from ecma script to link objects
+__proto__ is  browser runtime property, which was introduced by netscap but now every browser adopts this property.
+
+If you want link two objects 
+  ->__proto__ you can use but it is not ECMA Standard
+  ->Object.create is utilty api used to link two objects -ECMA     Standard
+
+Note:
+ any thing declared inside function that is not sharable
+
+
+Use case : how to use exiting (default) prototype object for code sharing.
+
+
+How to add common data /behaviour in prototype.
+
+Augmentation:
+Accout.prototype.balance =1000.00
+
+............................................................
+Property Lookup:
+...............
+When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
+
+Lookup chain:
+Prop--->parent 1--->parent 2--->parent 3--->parent n-- | null
+
+object.__proto__:Object
+           |
+           object.__proto__:Object
+  	   |
+	           object.__proto__:null
+
+If property not found any object in the chain, it will return undefined.
+ obj.x--->not p-->not p-->Object-->undefined
+.............................................................
+Performance:
+   When we lookup property it starts apply lookup algorthim
+this gives negative impative on performance.
+
+
+Object.hasOwnProperty is the only thing in JavaScript which deals with properties and does not traverse the prototype chain.
+
+console.log(g.hasOwnProperty('vertices'));
+// true
+
+console.log(g.hasOwnProperty('nope'));
+// false
+
+console.log(g.hasOwnProperty('addVertex'));
+// false
+
+console.log(g.__proto__.hasOwnProperty('addVertex'));
+// true
+
+.............................................................
+
+How to link two objects:
+
+Child.prototype  = Object.create(Parent.prototype)
+   
+
+Can you redefine(override) Object's Prototype methods?
+
+Object.prototype.create = ? =>dont
+
+Can you add global Apis for all instances in your application.
+
+Yes!
+Object.prototype.myapi = ?
+a.myapi()
+
+
+
+function Person(name = 'default') {
+    console.log('Person is called')
+    this.name = name;
+}
+Person.prototype.sayGreet = function () {
+    return 'greet'
+}
+
+function Employee(name) {
+    Person.call(this, name);
+    console.log('Employee is called')
+}
+Employee.prototype = Object.create(Person.prototype);
+
+const emp1 = new Employee('Subramanian');
+//emp1.__proto__ = new Person();
+console.log(emp1.name)
+
+const emp2 = new Employee('Karthik');
+console.log(emp2.name)
+
+const emp3 = new Employee('Saravana');
+console.log(emp3.name)
+
+////////////////////////////////////////////////////////
+
+class Account {
+    constructor(balance = 1) {
+        console.log('Account constructor')
+        this.balance = balance
+    }
+    calcuateInterest() {
+        return 80.0;
+    }
+
+}
+Account.prototype.bar = 'bar';
+
+class SavingsAccount extends Account {
+    constructor(accno = 1, name = 'name', balance) {
+        super(balance)
+        this.accno = accno;
+        this.name = name;
+        console.log('SavingsAcccount')
+    }
+    debit() {
+        return 9.8
+    }
+    calcuateInterest() {
+        return 10.0 * super.calcuateInterest();
+    }
+}
+SavingsAccount.prototype.foo = 'foo';
+
+
+const sa = new SavingsAccount(1, 'subramanian', 5000);
+sa.balance = 111111;
+console.log(sa.accno, sa.name, sa.balance)
+console.dir(sa);
+
+console.log(sa.foo, sa.bar)
+console.log('debit ', sa.debit());
+console.log('calculate interest  ', sa.calcuateInterest());
+
+const sa1 = new SavingsAccount(13, 'Ravi', 9000);
+console.log(sa1.accno, sa1.name, sa1.balance)
+/////////////////////////////////////////////////////////////
+
+const parent = {
+    id: 1
+};
+//child--->parent--->object
+const child = Object.create(parent);
+child.name = 'subramanian';
+child.foo = 'foo';
+console.log(child)
+
+//No Parent, independent: hero -->null
+const hero = Object.create(null);
+hero.name = 'Spider Man'
+console.log(hero);
+/////////////////////////////////////////////////////////////
+
+const favFood = {
+    name: 'rice',
+    toString() {
+        return this.name
+    }
+}
+console.log(favFood.toString());
+...............................................................
+
+static variables:
+.................
+
+static variables are simulation in ES 5
+
+function Utility() {}
+//static api simulation
+Utility.add = function (a, b) {
+    return a + b;
+}
+console.log(Utility.add(10, 10))
+//builtin Math utitly
+console.log(Math.random())
+
+class MathUtility {
+    static add(a, b) {
+        return a + b;
+    }
+    static substract(a, b) {
+        return a - b;
+    }
+
+}
+console.log(MathUtility.add(10, 90))
+console.log(MathUtility.substract(10, 90))
+.............................................................
+Javascript In built Objects:
+...........................
+POJO: /ISOMORPHIC : 
+ Object ->Parent  
+  Every object is instance of Object
+
+Object apis:
+  Object.create
+  Object.toString
+
+......Task.....
+ ->Object.freeze
+ ->Object.seal
+ ->Object.assign
+ ->Object.preventExtensions
+............................
+Wrapper Objects:
+ string  => String => function String(){}
+string apis:
+ number  => Number => function Number(){}
+boolean
+ boolean => Boolean => function Boolean(){}
+....................................................
+Math
+....................................................
+Date =>date and time manipulation
+.....................................................
+Array:
+  Object can be created in two ways
+  1.using array Constructor  = new Array()
+  2.using literal  => []
+
+Array api:
+ ->Iterators
+	->for...,
+        ->for..each
+        ->map
+        ->filter
+        ->find
+        ->reduce
+->add
+   where you add = > beg,end,middle
+     push
+
+->remove
+    splice,slice
+
+->update
+   ->slice,splice
+
+->utlity
+   sort ---comparator
+...........................................................
+Use case: Todo App:
+ Build todo App using class,Has-a,array api.
+
+/ Model
+/ Model
+
+class Todo {
+    constructor(title, date) {
+        Todo.nextId++;
+        this.id = Todo.nextId; // auto_increment
+        this.title = title;
+        this.completed = false
+        this.date = date
+    }
+}
+Todo.nextId = 0;
+// Service
+class TodosService {
+    constructor() {
+        this.todos = []
+    }
+    addTodo(title) {
+        let newTodo = new Todo(title)
+        this.todos = this.todos.concat(newTodo)
+    }
+    editTodo(id, newTitle) {
+        this.todos = this.todos.map(todo => todo.id === id ? Object.assign({}, todo, { title: newTitle }) : todo)
+    }
+    completeTodo(id) {
+        this.todos = this.todos.map(todo => todo.id === id ? Object.assign({}, todo, { completed: !todo.completed }) : todo)
+    }
+    completeAll() {
+        let isAllCompleted = this.todos.every(todo => todo.completed)
+        this.todos = this.todos.map(todo => todo.id === id ? Object.assign({}, todo, { completed: !isAllCompleted }) : todo)
+    }
+    deleteTodo(id) {
+        this.todos = this.todos.filter(todo => todo.id !== id)
+    }
+    clearCompleted() {
+        this.todos = this.todos.filter(todo => !todo.completed)
+    }
+    viewTodos(filter) {
+        this.todos.forEach(todo => console.log(todo))
+    }
+}
+
+const service=new TodosService();
+............................................................
+
+function  getX(x){
+   return x;
+}
+getX(1);
+getX(1);
+getX(2);
+
+Use Case 
+Reg:
+ If a function is called with a same value again and again,
+ that value must be cached and you have return from cache.
+
+lets say
+
+ getX(1) first name,=> return directly and cache this value
+ getX(1) ===>You need simple this value already cached,return from cache
+ getX(2)
+
+Tech: You can use closure,a data structure.
+
+...............................................................
+Synchronous && Asynchronous Programming:
+
+
+Asynchronous Programming is  one of the concurrency implementation.
+
+Concurrency : Doing multple things at a time
+
+->Process:
+    Program in execution.
+Computer arch supported only one program you can execute a time.
+
+Before 1970 there were no multi process
+
+UNICS - Project started at bell lab to run multi process.
+
+UNIX-multi Process.
+ 
+Multi process:
+->Time slice
+
+Sub Process: Process with in process.
+Thread 
+   unit of execution -sub process.
+sub process  is created  by calling a function/method/procedure
+
+
+function add(a,b){
+  return a+b
+}
+function getDataFromServer(){
+  code for connecting socket
+  code for getting data
+  code for processing data
+  code for closing socket
+}
+
+program:
+1.long running process
+   ->Block the main thread(js engine)
+
+2.short running process
+
+
+We need to separate out the long processing from the main process => worker thread model =>Async Model
+
+How to implement async programming?
+
+1.high level async api
+2.you need handler function -callback function
+
+High level async api:
+1.Timers
+  setTimeout,setInterval
+
+setTimeout(handler,3000)==>push inside stack===>delegate to browser api =>timer.c===>execute====>tick cpu clock===>timeout over===>timer.c api will return result to js engine which stores in event queue==>event loop checks whether stack is empty or not ,if empty push handler,process that , show result
+
+2.Network apis
+  1.XMLHttpRequest - Ajax
+
+ new XMLHttpRequest()===>push inside stack==>api=>http.c
+
+ 2.WebSocket
+
+3.DOM Event apis
+  click,keypress......
+.............................................................
+
+callback function:
+    function parameter.
+/////////////////////////////////////////////////////////////
+  
+//async code
+/* function getUser(cb) {
+    setTimeout(function () {
+        cb({
+            name: 'admin'
+        })
+    }, 1000);
+}
+console.log('start');
+getUser(function (response) {
+    console.log(response);
+})
+console.log('end'); */
+/* const getUser = cb => {
+    setTimeout(() => cb({
+        name: 'subramanian'
+    }), 1000)
+}
+console.log('start');
+getUser((response) => console.log(response));
+console.log('end'); */
+
+const getUser = _ => {
+    const mockUser = {
+        name: 'subramanian'
+    };
+    return new Promise((resolve, reject) =>
+        (mockUser ? setTimeout(_ => resolve(mockUser), 1000) : setTimeout(_ => reject({
+            err: 'wrong'
+        }), 1000))
+    )
+};
+getUser()
+    .then(response => console.log(response))
+    .catch(err => console.log(err))
+/////////////////////////////////////////////////////////////
+
+//Promise chaining with setTimeout:
+new Promise((resolve, reject) => {
+    setTimeout(() => resolve(1), 1000); // (*)
+}).then((result) => { // (**)
+    console.log(result); // 1
+    return result * 2;
+}).then((result) => { // (***)
+    console.log(result); // 2
+    return result * 2;
+}).then((result) => {
+    console.log(result);
+})
+////////////////////////////////////////////////////////////
+//the execution: 
+new Promise((resolve, reject) => {
+    throw new Error("Whoops!");
+}).catch((error) => {
+    console.log("The error is handled");
+})
+//////////////////////////////////////////////////////////////
+
+Promise:
+   new Promise( (res,rej))
+   Promise.resolve(value) – makes a resolved promise with the given value,
+    Promise.reject(error) – makes a rejected promise with the given error,
+    Promise.all(promises) – waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, then it becomes the error of Promise.all, and all other results are ignored.
+    Promise.race(promises) – waits for the first promise to settle, and its result/error becomes the outcome.
+
+
+
+
+//async code
+/* function getUser(cb) {
+    setTimeout(function () {
+        cb({
+            name: 'admin'
+        })
+    }, 1000);
+}
+console.log('start');
+getUser(function (response) {
+    console.log(response);
+})
+console.log('end'); */
+/* const getUser = cb => {
+    setTimeout(() => cb({
+        name: 'subramanian'
+    }), 1000)
+}
+console.log('start');
+getUser((response) => console.log(response));
+console.log('end'); */
+
+const getUser = _ => {
+    const mockUser = {
+        name: 'subramanian'
+    };
+    return new Promise((resolve, reject) =>
+        (mockUser ? setTimeout(_ => resolve(mockUser), 1000) : setTimeout(_ => reject({
+            err: 'wrong'
+        }), 1000))
+    )
+};
+getUser()
+    .then(response => console.log(response))
+    .catch(err => console.log(err))
+/////////////////////////////////////////////////////////////
+
+//Promise chaining with setTimeout:
+new Promise((resolve, reject) => {
+    setTimeout(() => resolve(1), 1000); // (*)
+}).then((result) => { // (**)
+    console.log(result); // 1
+    return result * 2;
+}).then((result) => { // (***)
+    console.log(result); // 2
+    return result * 2;
+}).then((result) => {
+    console.log(result);
+})
+////////////////////////////////////////////////////////////
+//the execution: 
+new Promise((resolve, reject) => {
+    throw new Error("Whoops!");
+}).catch((error) => {
+    console.log("The error is handled");
+})
+
+function getStatus(key) {
+    return key === '222' ? Promise.resolve('done') : Promise.reject('oops')
+}
+getStatus('222')
+    .then(status => console.log(status))
+    .catch(err => console.log(err))
+getStatus('444')
+    .then(status => console.log(status))
+    .catch(err => console.log(err))
+
+Promise.all([
+        new Promise((resolve, reject) => setTimeout(() => resolve(10), 3000)), // 1
+        new Promise((resolve, reject) => setTimeout(() => resolve(20), 2000)), // 2
+        new Promise((resolve, reject) => setTimeout(() => resolve(388), 1000)) // 3,
+        // new Promise((resolve, reject) => setTimeout(() => reject('promise all rejcect'), 5000))
+    ])
+    .then(res => console.log('Promise.All ', res))
+    .catch(err => console.log('Promise all has error', err))
+
+Promise.all([24, 444, 899]).then(res => console.log('Result all', res))
+
+Promise.race([
+        new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
+        new Promise((resolve, reject) => setTimeout(() => reject('my race error'), 300))
+    ]).then(res => console.log('race', res))
+    .catch((e) => console.log('race error', e))
+
+////////////////////////////////////////////////////////////
+
+Ajax:
+MS =>ActiveX  =>COM object =>HTTP Wrapper===>fetch data from
+ http channel.
+
+Browser----data------------------<----------Server
+
+2001 - Data Interchange format
+   ->how to communicate different systems(data /message passing)
+25+
+=>XML,JSON,TXT,DAT...............
+
+
+System 1                                   SYSTEM 2
+   DATA--XML=============================XML==DATA
+
+MS introduced Socket(http) Wrapper inside IE as activex Object
+which exposed  as high level javascript api.
+
+var xmlhttp=null;
+if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+ } else {
+    // code for old IE browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+
+JSON: javascript object notation: Data interchange format
+inspired javascript literal pattern
+
+JSON:
+ 1.JSON platform independent
+ 2.JSON is language indepdent
+    ->json is just text file /ascii
+ 3.JSON stores data in key-value pair model
+
+
+System 1                                    System 2
+(java)                                      (.net)
+
+(Java Object)                                   (C# Object)
+ArrayList                                    ArrayList
+         ----JSON-------------------------JSON--
+ parsers: converters: string to object and object to string
+
+
+Javascript language (ecma 5) added JSON parser as object .
+Now every browser supports JSON PARSER
+
+
+JSON rules:
+1.keys must be string , enclosed ""
+2.value must be string,number,boolean,object,array
+...............................................................
+
+const users = [{
+        id: 1,
+        name: 'a'
+    },
+    {
+        id: 2,
+        name: 'b'
+    },
+    {
+        id: 3,
+        name: 'c'
+    }
+];
+console.log(typeof users);
+
+//Object to String : JSON PARSER
+const res = JSON.stringify(users);
+console.log(typeof res);
+const r = JSON.parse(res);
+console.log(typeof r);
+////////////////////////////////////////////////////////////
+
+const product = {
+    "pid": 1
+
+}
+//What is type of pid 's value ? =>number
+//what is type of pid key ? => can be string, or symbol
+...........................................................
+
+AJAX PROGRAMMING : USING RAW XMLHTTP Request:
+.............................................
+
+function reqListener () {
+  console.log(this.responseText);
+}
+
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "http://www.example.org/example.txt");
+oReq.send();
+
+Higlevel: JS
+new XHR()
+open() ======>connect
+
+
+Low level:
+
+class HTTP{
+  private String body;
+  
+  public connect(){
+ 
+  }
+  public Response get(){
+   
+    //do low level io  
+  }
+
+}
+new HTTP()
+
+
+fetch:
+Promise p = fetch(url)
+
+..............................................................
+
+Use Case : You have list of urls(github urls), i want to make http call for all urls and you need collect user informations
+in one call.
+
+let urls = [
+  'https://api.github.com/users/iliakan',
+  'https://api.github.com/users/remy',
+  'https://api.github.com/users/jeresig'
+  'https://api.github.com/users/jeresig'
+];
+
+List all XTCore team member names.
+..............................................................
+async function:
+ Sync style of async programming.
+
+add()
+delete()
+update()
+
+Points:
+async function returns promise
+
+await key word
+The keyword await makes JavaScript wait until that promise settles and returns its result.
+
+The word “async” before a function means one simple thing: a function always returns a promise. If the code has return <non-promise> in it, then JavaScript automatically wraps it into a resolved promise with that value.
+
+Exception and Error Handling:
+
+try {
+  risky code
+}
+catch(e){
+
+}
+
+Error Object:
+Error is in built javascript constructor Function(object)
+
+throw new Error(errorinformation);
+
+...............................................................
+
+Build simple CRUD without UI:
+............................
+
+1.setup mock server
+2.Add Service Class
+
+Model
+class Profile{
+    id,name,city
+}
+Service
+class ProfileService{
+
+   constructor(){}
+   async save(){
+        fetch(url)
+     return response
+   }
+   findAll(){} // return all profiles
+   findById(id) {} return profile by id
+   update(id){} update profile by id
+   remove(id){} {}
+
+}
+Ui:View
+//Ui :Use dependency Injection
+class ProfileComponent{
+   
+}
+/////////////////////////////////////////////////////////////
+
+SOLID:
+
+SOLID is one of the most popular sets of design principles in object-oriented software development.
+
+ It’s a mnemonic acronym for the following five design principles:
+
+1.Single Responsibility Principle
+2.Open/Closed Principle
+3.Liskov Substitution Principle
+4.Interface Segregation Principle
+5.Dependency Inversion
+
+
+1.SRP->Single Responsibility Principle
+
+The Single Responsibility Principle (SRP) states that each software module should have one and only one reason to change.
+
+Software Module:
+   Could be class | function(method) | (package-java) (namespace-C#) (Module -JS).
+
+
+public class Employee {
+  public Money calculatePay();
+  public void save();
+  public String reportHours();
+}
+
+public class PayCalculator{
+   public Money calculatePay();
+}
+public class EmplyeeDAO{
+  public void save();
+}
+
+public class AttendanceCalculator{
+ public Money calculatePay();
+}
+
+
+ "Gather together the things that change for the same reasons. Separate those things that change for different reasons."
+
+
+Hands On:
+Apply SRP on ProfileService.
+
+ProfileService is already locked with fetch logic,refactor code using SRP princple.
+///////////////////////////////////////////////////////////////
+
+O-Open-closed Principle:
+.......................
+
+“Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.”
+
+The general idea of this principle is great. It tells you to write your code so that you will be able to add new functionality without changing the existing code. That prevents situations in which a change to one of your classes also requires you to adapt all depending classes. Unfortunately, Bertrand Mayer proposes to use inheritance to achieve this goal
+
+That’s why Robert C. Martin and others redefined the Open/Closed Principle to the Polymorphic Open/Closed Principle. It uses interfaces instead of superclasses to allow different implementations which you can easily substitute without changing the code that uses them. The interfaces are closed for modifications, and you can provide new implementations to extend the functionality of your software.
+
+The main benefit of this approach is that an interface introduces an additional level of abstraction which enables loose coupling. The implementations of an interface are independent of each other and don’t need to share any code. If you consider it beneficial that two implementations of an interface share some code, you can either use inheritance or composition.
+
+interface Calculator{
+calculate()
+}
+class SalaryCalculator implements Calculator{
+}
+class CommissionCalculator implements Calculator{
+}
+
+/////////////////////////////////////////////////////////////
+\
+This class should be closed for modification ,should be allowed for extension
+class  WebServiceAdapter{
+   findAll(){}
+   findById(){}
+   post(){}
+   remove(){}
+   update(){}
+}
+class FetchAdapter extends WebServiceAdapter
+{
+  findByEmail(){}
+}
+
+class AxiosAdapter extends WebServiceAdapter{
+
+
+}
+///////////////////////////////////////////////////////////////
+Liskov substitution principle:
+
+"Subtypes must be substitutable for their base types"
+
+C#/Java /TypeScript: not in js
+
+class Animal{}
+
+class Dog exends Animal{}
+class Cat extends Animal{}
+class Lion extends Animal{}
+
+Dog d=new Dog();
+
+Animal a =new Dog(); //
+
+JS Testing:
+
+var a ={}
+
+a instanceof Object =>True
+
+class Animal{}
+
+class Dog extends Animal{}
+
+const dog =new Dog();
+
+console.log(dog instanceof Animal) =>True
+//////////////////////////////////////////////////////////////
+Interface Segregation Principle:
+
+Clients should not be forced to depend on methods that they do not use.
+
+eg:
+In Angular , Life cycle methods are not grouped inside one single interface, why
+   The reason is all Component need not implement all life cycle methods.
+
+interface OnInit {
+  ngOnInit(): void
+}
+
+interface OnDestroy {
+  ngOnDestroy(): void
+}
+
+interface LifeCycles{
+ ngOnInit(): void
+ ngOnDestroy(): void
+}
+
+class CustomerComponent implements OnInit{
+ ngOnInit(){}
+
+}
+
+
+class OrderComponent implements OnInit,OnDestroy{
+ ngOnInit(){}
+ ngOnDestroy(){}
+}
+
+////////////////////////////////////////////////////////////
+
+Dependency-Inversion Principle
+
+High-level modules should not depend on low-level modules.
+Both should depend on abstractions.
+Abstractions should not depend on details. Details should
+depend on abstractions.
+
+Typescript:
+
+interface Adapter{}
+
+class FireBaseAdapter implements Adapter{}
+   
+class FetchAdapter implements Adapter{ }
+
+
+class EmployeeService{
+  
+    constructor(adapter:Adapter){
+     this.adapter = adapter;
+   }
+}
+new EmployeeService(new FireBaseAdapter())
+new EmployeeService(new FetchAdapter())
+
+/////////////////////////////////////////////////////////////
+
+javascript Modules:
+..................
+
+Moduality is concept of organizing code into multiple files.
+
+Loaders and Linkers:
+
+  These are programs part of every language runtime,responsible for file linking and loading
+
+Hello.cs
+namespace M1
+class Hello{}
+
+
+Main.cs
+namespace M2
+import M1;
+
+class Main{
+  main(){
+    new Hello();
+  }
+}
+
+///////////////////////////////////////////////////////////
+Javascript engine provides simple loader which can load one .js file at a time.
+
+If file has linking with other file,that also should be loaded separtly.
+
+Javascript Modules:
+In js we can organize code in many ways
+
+1.using vannila js patterns
+
+Pattern 1: writing js inside html using script tag.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function calculate(a, b) {
+            return add(a, b);
+        }
+
+        function main() {
+            var result = calculate(10, 10);
+            console.log("Add", result)
+        }
+        main();
+    </script>
+</head>
+
+<body>
+    <h1>Javascript Modules-Pattern 1</h1>
+</body>
+
+</html>
+How to modularize the code?
+
+write in a separte file
+
+Pattern 2: writing js in a file and link inside html using script tag.
+
+index.js
+function add(a, b) {
+    return a + b;
+}
+calculate.js
+function calculate(a, b) {
+    return add(a, b);
+}
+
+index.js
+function main() {
+    var result = calculate(10, 10);
+    console.log("Add", result)
+}
+main();
+index.html
+    <script src="src/index.js"></script>
+
+Pattern 3: write each functionality in a separate file and link them with global scope issues
+
+index.html
+    <script src="src/add.js"></script>
+    <script src="src/thridparty.js"></script>
+    <script src="src/calculate.js"></script>
+    <script src="src/index.js"></script>
+
+index.js
+function add(a, b) {
+    return a + b;
+}
+calculate.js
+function calculate(a, b) {
+    return add(a, b);
+}
+thirdparty.js
+function add(a, b) {
+    return a * b;
+}
+index.js
+function main() {
+    var result = calculate(10, 10);
+    console.log("Add", result)
+}
+main();
+
+Pros and cons:
+Pros:
+code has been separated
+
+cons:
+1.we need to link files manually
+2.code mixing.
+
+Pattern 4: Dawn of Module Design Patterns
+1.Global Variable/Namespace design pattern
+
+As per design pattern:
+
+1.code must be encapulated inside a namespace
+  ->Namespace is implemented via "Literal objects"
+
+
+index.html
+  <script src="src/app.js"></script>
+    <script src="src/add.js"></script>
+    <script src="src/thridparty.js"></script>
+    <script src="src/calculate.js"></script>
+    <script src="src/index.js"></script>
+
+app.js
+var MyApp = {
+
+};
+add.js
+MyApp.add = function (a, b) {
+    return a + b;
+};
+calcuate.js
+MyApp.calculate = function (a, b) {
+    return MyApp.add(a, b);
+};
+index.js
+function main() {
+    var result = MyApp.calculate(10, 10);
+    console.log("Add", result)
+}
+main();
+
+cons:
+File Linking:
+   Files must be linked/refered in index.html manually.
+
+Enterprise Javascript Application Modularity Design patterns:
+.............................................................
+1.AMD
+2.CommonJS -CJS
+3.ES 6 Modules
+4.System
+5.UMD
+
+
+1.Asynchronous module definition
+ ->Spec , talks about how to link files and how to share code.
+
+We need to modularize our code based on amd theory.
+
+AMD proposes keywords
+1.define
+2.require
+
+define is a function which encapulates our code and dependencies
+
+Syntax:
+
+urn function calculate(a, b) {
+        return add(a, b);
+    };
+});
+
+index.js
+require(["./calculate"], function (calculate) {
+    var result = calculate(10, 10);
+    console.log(result);
+});
+
+Note: Any Module pattern, browser cant understand, we need to provider explicit loaders.
+
+Loader : it is just another js file/lib/framework
+ through which we have to load our code.
+
+
+AMD loaders:
+require.js
+///////////////////////////////////////////////////////////////
+index.html
+<script data-main="scripts/main" src="scripts/require.js"></script>
+/////////////////////////////////////////////////////////////
+
+Common JS: CJS
+..............
+CJS abstracted amd infra structure code.
+CJS is simiplar than amd.
+
+CJS Keywords:
+require          
+   function 
+  to link files
+
+share code:
+exports
+    variable
+module.exports
+   variable
+behind it uses namespace pattern.
+
+Node.js introduced built in  CJS loader as part of Node.
+  ->In node , we dont need explicit cjs loader
+  ->In browser, we need explicit cjs loader.
+
+//////////////////////////////////////////////////////////////
+
+Steps:
+
+1.code sharing
+ code could be ->variables,functions,es 6 classes
+exports
+  built in variable whos default is empty literal object
+  var value=require('file')
+  value could be literal object
+module.exports
+  which also used for code sharing but which helps to share
+code "as it is".
+
+2.file linking
+  require('./fileName')
+
+
+/////////////////////////////////////////////////////////////
+
+CJS loaders for Browser:
+
+1.browserfiy
+
+Use Case:
+
+Build ProfileService App using JS Module Pattern
+A.Using COMMON JS Module Pattern
+B.Using ES 6 Module Pattern
+///////////////////////////////////////////////////////////////
+cjs example
+
+mylib.js
+//variables
+exports.name = 'Subramanian';
+exports.age = 35;
+exports.isActive = true;
+exports.calcualteSalary = function () {
+    return 1000;
+}
+exports.address = {
+    city: 'chennai'
+}
+exports.skills = [{
+    id: 1,
+    name: 'javascript'
+}, {
+    id: 2,
+    name: 'React'
+}, {
+    id: 3,
+    name: 'Angular'
+}];
+
+add.js
+'use strict'
+
+//var exports = {add:function}
+
+exports.add = function add(a, b) {
+    return a + b;
+}
+calculate.js
+//const result = require('./add');
+const {
+    add
+} = require('./add')
+
+exports.calculate = function calculate(a, b) {
+    return add(a, b)
+};
+
+FetchService.js
+class FetchService {
+
+    findAll() {
+        return 'Find All'
+    }
+    findById(id) {
+        return 'FindBy' + id
+    }
+    save() {
+        return 'Save'
+    }
+    remove() {
+        return 'Remove'
+    }
+
+}
+module.exports = FetchService;
+
+index.js
+const {
+    calculate
+} = require('./calculate');
+const {
+    name,
+    age,
+    calcualteSalary,
+    isActive,
+    address,
+    skills
+} = require('./Mylib');
+
+const FetchService = require('./FetchService');
+
+
+
+console.log(calculate(10, 60));
+console.log(name, age, calcualteSalary(), isActive, address.city, skills);
+
+const fService = new FetchService();
+console.log(fService.findAll());
+console.log(fService.findById(1))
+console.log(fService.save());
+console.log(fService.remove());
+/////////////////////////////////////////////////////////////
+
+Namespace==>AMD ===> CJS 
+
+ES 6  Module  = AMD + CJS +Namespace
+
+It is part of ECMA Spec.
+
+Stilll browser and node does not support es 6 modules nativly
+ ->we need loader.
+
+ES  6 Module keywords
+
+1.code sharing
+  export,export default
+
+2.file linking
+   import
+
+export:
+  which augments any thing inside literal object.
+
+syntax:
+   export  function add(){}
+/////////////////////////////////////////////////////////////
+
+Loaders for e6 Modoules:
+
+1.Webpack
+  npm install -g webpack
+  npm install -g webpack-cli
+
+2.Rollup
+
+////////////////////////////////////////////////////////////////
+Basic ES 6 Modules:
+
+add.js
+export function add(a, b) {
+    return a + b;
+}
+
+calculate.js
+
+import {
+    add
+} from './add';
+
+export function calculate(a, b) {
+    return add(a, b)
+}
+
+index.js
+
+import {
+    name,
+    age,
+    sayHello,
+    isActive
+} from './mylib';
+
+console.log(name, age, sayHello(), isActive);
+
+mylib.js
+// export const name = 'Subramanian';
+// export const age = 18;
+// export const isActive = true;
+// export const sayHello = () => 'Hello';
+
+const name = 'Subramanian';
+const age = 18;
+const isActive = true;
+const sayHello = () => 'Hello';
+
+export {
+    name,
+    age,
+    isActive,
+    sayHello
+};
+
+/////////////////////////////////////////////////////////
+as keyword : import alise
+........................
+
+Incase any confilct when importing
+
+Router.js
+export class Router {
+    constructor() {
+        console.log('My Router class')
+    }
+}
+BrowserRouter.js
+export class Router {
+    constructor() {
+        console.log('Browser Router class')
+    }
+}
+
+import {
+    Router
+} from './Router';
+import {
+    Router as BrowserRouter
+} from './BrowserRouter';
+
+new Router();
+new BrowserRouter();
+//////////////////////////////////////////////////////////////
+Import All:
+
+MathCalc.js
+
+export const add = (a, b) => a + b;
+export const substract = (a, b) => a - b;
+export const multiply = (a, b) => a * b;
+export const division = (a, b) => a / b;
+
+
+index.js
+import * as calc from './MathCalc';
+console.log(calc.add(1, 2));
+console.log(calc.multiply(1, 2));
+console.log(calc.division(1, 2));
+
+////////////////////////////////////////////////////////////
+export default
+
+ ->It returns the "things(class,function,method,variable) returns as it is".
+  ->You can declare only one export default.
+ ->You can mix export and export default in a single file.
+    When you import export default must present first     statment,then export statements
+
+Employee.js
+// export default class Employee {
+
+// }
+
+export const SKILLS = ['javascript', 'es6', 'node'];
+
+class Employee {
+    constructor() {
+        console.log('Employee Constructor')
+    }
+}
+
+export default Employee;
+
+index.js
+import Employee, {
+    SKILLS
+} from './Employee';
+
+new Employee();
+console.log(SKILLS)
+
+///////////////////////////////////////////////////////////////
+
+Barrel export: Re Export:
+
+Single Folder,multiple files,each have multiple exports
+
+
+When you import the syntax below
+import {
+    customer
+} from '../Models/Customer';
+
+import {
+    order
+
+} from '../Models/Order';
+import {
+    product
+} from '../Models/Product';
+
+
+Barrel export will help to reduce multiple import statements.
+
+Folder
+   ->file1.js
+   ->file2.js
+   ->file3.js
+   ->index.js
+
+////////////////////////////////////////////////////////////
+models/Customer.js
+export const customer = {
+    id: 1,
+    name: 'Subramanian'
+};
+models/Order.js
+export const order = {
+    id: 'OO101',
+    value: 1000
+};
+models/Product.js
+export const product = {
+    id: 'PO101',
+    name: 'Mobile'
+};
+modles/index.js  =>Barrel export file
+import {
+    customer
+} from './Customer';
+
+import {
+    order
+} from './Order';
+import {
+    product
+} from './Product';
+
+export {
+    customer,
+    order,
+    product
+};
+
+services/InvoiceService.js
+// import {
+//     customer
+// } from '../Models/Customer';
+
+// import {
+//     order
+
+// } from '../Models/Order';
+// import {
+//     product
+// } from '../Models/Product';
+
+import {
+    order,
+    product,
+    customer
+} from '../Models';
+
+
+export class InvoiceService {
+    getProduct() {
+        return product;
+    }
+    getOrder() {
+        return order;
+    }
+    getCustomer() {
+        return customer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

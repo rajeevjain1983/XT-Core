@@ -15,31 +15,36 @@
       body{
           background: aqua;
       }
-      .left{
+      .box1{
           background: red;
       }
-      .right{
+      .box2{
           background: blue;
       }
-      .layout{
-          background: white
+      .box3{
+          background: green;
       }
+      .box4{
+          background: yellow;
+      }
+      .box5{
+          background: white;
+      }
+      
+      
 
   </style>
   <body>
 
-    <main class="container layout">
-            <h1>Hello, world!</h1>
-            <div class="row">
-                <div class="col-md mr-5 left">
-                    <p>Left section</p>
+        <div class="container">
+                <div class="row">
+                  <div class="col-6 box1">Column</div>
+                  <div class="col-6 box2">Column</div>
+                 
+                  <div class="col-12 box3">Column</div>
+                  <!-- <div class="col box4">Column</div> -->
                 </div>
-                <div class="col-md-6 right">
-                        <p>Rifht section</p>
-                    </div>
-                    
-            </div>
-    </main>
+              </div
     
 
     <!-- Optional JavaScript -->

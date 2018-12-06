@@ -1,88 +1,45 @@
 {
-  "profile": [
+  "profile": [],
+  "profiles": [
     {
-      "id": 667,
-      "name": "Rajeev jain",
-      "age": 32,
-      "city": "Noida"
+      "id": 337,
+      "name": "Rajeev Jain",
+      "email": "rajeevjain1508@gmail.com",
+      "phone": "9971222558",
+      "gender": "M",
+      "city": "Noida",
+      "state": "Delhi",
+      "description": ""
     },
     {
-      "id": 799,
-      "name": "Sachin",
-      "age": 40,
-      "city": "Noida"
+      "id": 691,
+      "name": "Rajeev Jain",
+      "email": "rajeevjain1508@gmail.com",
+      "phone": "9971222558",
+      "gender": "M",
+      "city": "Noida",
+      "state": "Delhi",
+      "description": ""
     },
     {
-      "id": 136,
-      "name": "Naren",
-      "age": 45,
-      "city": "Noida"
+      "id": 226,
+      "name": "Rajeev Jain",
+      "email": "rajeevjain1508@gmail.com",
+      "phone": "9971222558",
+      "gender": "M",
+      "city": "Noida",
+      "state": "Delhi",
+      "description": ""
     },
     {
-      "id": 668,
-      "name": "Nitin",
-      "age": 32,
-      "city": "Noida"
-    },
-    {
-      "id": 326,
-      "name": "Gaurav",
-      "age": 30,
-      "city": "Delhi"
-    },
-    {
-      "id": 699,
-      "name": "Naveen",
-      "age": 31,
-      "city": "Delhi"
-    },
-    {
-      "id": 172,
-      "name": "Samvenda",
-      "age": 22,
-      "city": "Noida"
-    },
-    {
-      "id": 607,
-      "name": "Sonal",
-      "age": 32,
-      "city": "Noida"
-    },
-    {
-      "id": 868,
-      "name": "Anuj",
-      "age": 32,
-      "city": "Noida"
-    },
-    {
-      "id": 824,
-      "name": "Rahul jain",
-      "age": 32,
-      "city": "Noida"
-    },
-    {
-      "id": 250,
-      "name": "Nidhi jain",
-      "age": 32,
-      "city": "Noida"
-    },
-    {
-      "id": 709,
-      "name": "Priya jain",
-      "age": 32,
-      "city": "Noida"
-    },
-    {
-      "id": 670,
-      "name": "Anjali jain",
-      "age": 32,
-      "city": "Noida"
-    },
-    {
-      "id": 712,
-      "name": "Maneesha jain",
-      "age": 32,
-      "city": "Noida"
+      "id": 334,
+      "name": "Rajeev Jain",
+      "email": "rajeevjain1508@gmail.com",
+      "phone": "9971222558",
+      "gender": "M",
+      "city": "Noida",
+      "state": "Delhi",
+      "description": ""
     }
   ]
 }
