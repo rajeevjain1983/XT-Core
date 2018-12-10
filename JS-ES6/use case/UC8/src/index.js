@@ -2,8 +2,23 @@ import Profile from './user';
 import UserService from './UserService';
 import UserComponent from './UserComponent';
 
-document.querySelector('#form1').addEventListener('click',function(e){
- });
+var textboxes=document.querySelectorAll("input[type='text'").forEach((item,index)=>{
+    item.addEventListener('focusout',(e)=>{
+        let form=document.querySelector("#form1");
+        let valid=form.reportValidity();
+        if(valid){
+            document.querySelector('#btnSubmit').disabled = true;
+        }
+        else{
+            document.querySelector('#btnSubmit').disabled = true;
+        }
+    });
+});
+
+// document.querySelectorAll("input[type='text'")[0].addEventListener('click',()=>{
+//     alert('Hello');
+// });
+
 
 const getFieldsValue=function(){
 

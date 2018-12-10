@@ -1,0 +1,81 @@
+$font-stack: Helvetica,sans-serif;
+$primary-color:#333;
+$text-align:left;
+$width:5em;
+body{
+    font:100% $font-stack;
+    color:$primary-color;
+    text-align: $text-align
+}
+#main{
+    width:$width;
+}
+#sidebar{
+    width:$width
+}
+p{
+    $width:1000px;
+    width:round($width)/2;
+    width:round(1.5)/2;
+    height:round(500px/2);
+    margin-left:20px+10px;
+}
+span{
+    content:'hello'+'welcome';
+}
+
+$age:20;
+.bool{
+    @if($age>10 and $age<25){
+        color:green;
+    }
+}
+// Interpolation :#{}
+
+$var:20;
+$name: foo;
+$attr: border;
+p.#{$name}{
+    #{$attr}-color:blue;
+}
+
+//Default values
+$content: "First Content";
+$content:"Secon Content?"!default;
+
+$new_content:"First time references"!default;
+
+//Resuable functions
+//@mixin=> define mixin
+//mixin is resuable chunks
+//include => connnect mixin with css
+
+
+@mixin transform($property){
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin colors($text,$background,$border) {
+    background-color: $background;
+    border:$border;
+    color:$text;
+}
+.box {
+    @include transform(rotate(30deg));
+    @include colors('yellow','red' ,'black' );
+}
+
+%message-shared{
+    padding:10px;
+    color:#333;
+}
+
+.message{
+    @extend %message-shared;
+}
+.warning{
+    @extend %message-shared;
+    background-color: yellow;
+}

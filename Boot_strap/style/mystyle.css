@@ -1,0 +1,52 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  text-align: left;
+}
+
+#main {
+  width: 5em;
+}
+
+#sidebar {
+  width: 5em;
+}
+
+p {
+  width: 500px;
+  width: 1;
+  height: 250px;
+  margin-left: 30px;
+}
+
+span {
+  content: "hellowelcome";
+}
+
+.bool {
+  color: green;
+}
+
+p.foo {
+  border-color: blue;
+}
+
+.box {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  background-color: "red";
+  border: "black";
+  color: "yellow";
+}
+
+.warning, .message {
+  padding: 10px;
+  color: #333;
+}
+
+.warning {
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=mystyle.css.map */
