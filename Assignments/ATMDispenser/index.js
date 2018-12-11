@@ -1,7 +1,7 @@
 
 
 const demo=[1,2,5,10, 20, 50, 100, 200, 500,2000];
-//document.querySelector('#txtGetMoney').disabled = true;
+document.querySelector('#txtGetMoney').disabled = true;
 console.log(demo);
 
 class DispenseNotes{
@@ -28,17 +28,17 @@ class ATM{
 }
 
 
-// document.querySelector("#txtAmount").addEventListener('focusout',(e)=>{
-//     let form=document.querySelector(".form");
-//     let valid=form.reportValidity();
-//     document.querySelector('#txtGetMoney').disabled = !valid;
-// });
+document.querySelector("#txtAmount").addEventListener('focusout',(e)=>{
+    let form=document.querySelector(".form");
+    let valid=form.reportValidity();
+    document.querySelector('#txtGetMoney').disabled = !valid;
+});
 
-// document.querySelector("#txtAmount").addEventListener('changed',(e)=>{
-//     let form=document.querySelector(".form");
-//     let valid=form.reportValidity();
-//     document.querySelector('#txtGetMoney').disabled = !valid;
-// });
+document.querySelector("#txtAmount").addEventListener('input',(e)=>{
+    let form=document.querySelector(".form");
+    let valid=form.reportValidity();
+    document.querySelector('#txtGetMoney').disabled = !valid;
+});
 
 
 
@@ -53,45 +53,46 @@ document.querySelector("#txtGetMoney").addEventListener("click",(e)=>{
         let atm=new ATM(demo);
         atm.dispense(amount,demo.length-1);
         renderResult(atm.dis);
-        //console.log(atm.dis);
         e.preventDefault();
-     
     }
 });
 
 
 const renderResult=(result=[])=>{
-    let resultContainer=document.querySelector(".result");
-    resultContainer.innerHTML="";
-    let node = document.createElement("H4");
-    let textnode = document.createTextNode("You will get the following input");
-    node.appendChild(textnode);
-    resultContainer.appendChild(node);
-    node=document.createElement("div");
-    node.className="line";
-    resultContainer.appendChild(node);
     let totalNotes=0;
+    let resultContainer=document.querySelector(".result");
+    resultContainer.innerHTML=""; //initially set black || No child node
+    
+    resultContainer.appendChild(createNode("H4","You will get the following input"));
+    resultContainer.appendChild(createNode("div","","line"));
+    
     result.forEach((item,index)=>{
         totalNotes=totalNotes+item.count;
-        node=document.createElement("span");
-        textnode = document.createTextNode(`${item.count} notes of Rs ${item.note}`);
-        node.appendChild(textnode);
-        resultContainer.appendChild(node);
+        resultContainer.appendChild(createNode("span",`${item.count} notes of Rs ${item.note}`));
         if((index+1)%2===0)
         {
-            node=document.createElement("div");
-            node.className="line";
-            resultContainer.appendChild(node);
+            resultContainer.appendChild(createNode("div","","line"));
         }
     });
-    node=document.createElement("div");
-    node.className="line thick";
-    resultContainer.appendChild(node);
 
-    node=document.createElement("H4");
-    textnode = document.createTextNode(`Total Notes Dispensed:${totalNotes}`);
-    node.appendChild(textnode);
-    resultContainer.appendChild(node);
+    resultContainer.appendChild(createNode("H4",`Total Notes Dispensed:${totalNotes}`));
+    resultContainer.appendChild(createNode("div","","line thick"));
+}
+
+
+//Generate dynamic HTML node
+const createNode=(nodeName="span",text="",className="")=>{
+    let node = document.createElement(nodeName);
+    if(text.length>0)
+    {
+        let textnode = document.createTextNode(text);
+        node.appendChild(textnode);
+    }
+    if(className.length>0)
+    {
+        node.className=className;
+    }
+    return node;
 }
 
 

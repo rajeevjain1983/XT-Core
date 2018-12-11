@@ -3,7 +3,7 @@ $width:900px;
 body{
     margin:0 0 0 0;
     padding: 0 0 0 0;
-
+    font-family: "Times New Roman", Times, serif;
 }
 
 .main{
@@ -14,42 +14,35 @@ body{
 .header{
     text-align: center;
     padding:30px 30px;
-    background-color: #6666cc; 
+    background-color: SlateBlue; 
     color:white;
 }
 .container{
     background-color:#F0F0F0;
     margin-top: 30px;
     padding: 20px 20px 0 20px;
-    //padding:20px;
-   // border:1px solid red;
   }
   
 
 .col-left{
-float:left;
-width:50%;
-//background-color:#D0D0D0;
-//padding: 10px 20px 20px  20px;
-
-
-// text-align: center;
+    float:left;
+    width:50%;
 }
 
 .col-left .content{
     padding: 10px 50px 50px  50px;
-    //border:1px solid black;
     background-color:white;
-  // box-shadow: 0 0 0 1px #D0D0D0;
 }
 .col-left h2{
     text-align: center;
+}
+h4{
+    line-height: 1px;
 }
 
  .col-right{
     float:left;
     width:50%;
-    //background-color:#D0D0D0;
     }
     .col-right .content{
         padding: 10px 20px 0px  20px;
@@ -62,12 +55,12 @@ width:50%;
        display:inline-block;
     }
     .line{
-        background-color:gray;
+        background-color:#E0E0E0;
         width:100%;
         height: 1px;
     }
     .thick{
-        height: 1.5px;
+        height: 2px;
     }
 
 
@@ -83,19 +76,23 @@ width:50%;
     outline: none;
     border:1px solid #D0D0D0;
     margin: 7px 2px 7px 0;
-   
+    text-align: right;
+    padding-right: 10px;
+    font-size: 15px;
 }
 .button-box{
     width:100%;
     height: 55px;
-    background-color: blue;
+    background-color: #0099ff;
     margin: 7px 0;
-    // outline: none;
     border:none;
     color:White;
     font-size: 19px;
 }
-
+.button-box:disabled
+{
+  color: #666666;
+}
 
 .clearfix::after {
     content: "";
