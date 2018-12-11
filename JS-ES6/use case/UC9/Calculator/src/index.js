@@ -2,22 +2,40 @@
 var inputText="";
 document.querySelectorAll(".button").forEach((item,index)=>{
     item.addEventListener("click",(e)=>{
-        storeExpresson(e.target.innerText);
+        
+       // debugger;
+       storeExpressonFromMouse(e.target.innerText);
     });
 });
 
-function storeExpresson(input=""){
-    //console.log(input);
+function storeExpressonFromMouse(input=""){
+    //debugger;
     let inputBox=document.querySelector(".input-text");
     let inputChar=input;
     let inputCode=inputChar.charCodeAt(0);
     console.log(inputCode);
-   if(inputCode!==61 && inputCode!==67){
+   if(inputCode!==61 && inputCode!==67 ){
     inputBox.value=inputBox.value+inputChar;
    }
     if(isOperator(inputCode)){
         inputText=inputText+inputBox.value;
-        //console.log(inputText);
+        inputBox.value="";
+    }
+}
+
+function storeExpressonFromKeyboard(input=""){
+   // debugger;
+    let inputBox=document.querySelector(".input-text");
+    let inputChar=input;
+    let inputCode=inputChar.charCodeAt(0);
+    console.log(inputCode);
+
+    if(isOperator(inputCode)){
+        if(inputCode!==61){
+            //debugger;
+            inputBox.value=inputBox.value+inputChar;
+        }
+        inputText=inputText+inputBox.value;
         inputBox.value="";
     }
 }
@@ -25,7 +43,7 @@ function storeExpresson(input=""){
 
 
 document.querySelector("#btnEqual").addEventListener("click",()=>{
-   f();
+    calculate();88
 });
 
 document.querySelector("#btnClear").addEventListener("click",()=>{
@@ -40,19 +58,28 @@ document.querySelector("#btnClear").addEventListener("click",()=>{
 // });
 
 document.querySelector(".input-text").addEventListener("keypress", function (evt) {
-   console.log(evt.key);
-    if (!validInput(evt.which))
+   //debugger;
+    //console.log(evt.key);
+    this.selectionStart = this.selectionEnd = this.value.length;
+    if (validInput(evt.which))
     {
-        evt.preventDefault();
-    }
-    else if(evt.which===61){
-        evt.preventDefault();
+        if(isOperator(evt.which)){
+            evt.preventDefault();
+        }
+        storeExpressonFromKeyboard(evt.key);
+        if(evt.which===61){
         calculate();
+        }
     }
     else{
-        storeExpresson(evt.key);
+        evt.preventDefault();
     }
+
 });
+
+document.querySelector("body").addEventListener("keypress", function (evt) {
+    document.querySelector(".input-text").focus();
+ });
 
 function validInput(input){
 
@@ -78,6 +105,7 @@ function isOperator(input){
 }
 
 function calculate(){
+    //debugger;
     if(inputText.length>0){
         console.log(inputText.length);
         let result=eval(inputText);
