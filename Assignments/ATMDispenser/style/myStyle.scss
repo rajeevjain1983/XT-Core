@@ -1,5 +1,5 @@
 
-$width:900px;
+$width:80%;
 body{
     margin:0 0 0 0;
     padding: 0 0 0 0;
@@ -9,6 +9,8 @@ body{
 .main{
     width:$width;
     margin: 50px auto;
+    min-width: 780px;
+    max-width: 1088px;
 }
 
 .header{

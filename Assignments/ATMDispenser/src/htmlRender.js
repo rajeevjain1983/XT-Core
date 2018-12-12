@@ -9,7 +9,10 @@ export class HtmlRender{
         resultContainer.appendChild(this.createNode("H4","You will get the following input"));
         resultContainer.appendChild(this.createNode("div","","line"));
         
+        let position=result.length-1;
         result.forEach((item,index)=>{
+            //Geting data from reverse order
+            item=result[position-index];
             totalNotes=totalNotes+item.count;
             resultContainer.appendChild(this.createNode("span",`${item.count} notes of Rs ${item.note}`));
             if((index+1)%2===0)

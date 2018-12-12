@@ -21,6 +21,7 @@ document.querySelector("#txtAmount").addEventListener('input',(e)=>{
 
 //************************************** Button Click *******************************************
 document.querySelector("#txtGetMoney").addEventListener("click",(e)=>{
+    
     let htmlRender=new HtmlRender();
     let resultContainer=document.querySelector(".result");
     let form=document.querySelector(".form");
