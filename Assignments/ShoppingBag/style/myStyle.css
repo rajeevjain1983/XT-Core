@@ -1,0 +1,184 @@
+body {
+  padding: 2em;
+  background-color: gray;
+  font-family: "Times New Roman", Times, serif;
+  color: #E0E0E0;
+}
+
+.wrapper {
+  display: flex;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  font-size: 10px;
+}
+
+.row {
+  display: flex;
+  margin-top: 20px;
+}
+
+.line {
+  background-color: #E0E0E0;
+  width: 100%;
+  height: 1px;
+}
+
+.thick {
+  height: 5px;
+}
+
+.heading-Text {
+  color: #787878;
+}
+
+.price {
+  font-size: 15px;
+}
+
+.wrapper > * {
+  flex: 1 100%;
+}
+
+.header {
+  padding: 8px 10px 0px 10px;
+  text-transform: uppercase;
+  color: #787878;
+}
+
+.header h1 {
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  margin-bottom: 50px;
+}
+
+.sub-header {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-items {
+  display: flex;
+  justify-content: space-around;
+  min-width: 280px;
+  max-width: 280px;
+}
+
+.aside-2 {
+  display: flex;
+  justify-content: space-around;
+  min-width: 280px;
+  max-width: 280px;
+}
+
+.button-header-style {
+  justify-content: space-around;
+  list-style: none;
+  padding: 0px;
+}
+
+.desktop-product-button-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 90px;
+  padding-right: 100px;
+}
+
+.mobile-product-button-header {
+  display: none;
+}
+
+.button-header-style a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #787878;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.image-container {
+  min-width: 150px;
+  max-height: 200px;
+  padding: 0px;
+  margin: 5px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0px auto;
+  background: white;
+}
+
+.aside-1 {
+  min-width: 180px;
+  line-height: 15px;
+}
+
+.aside p {
+  margin: 0px;
+}
+
+.label {
+  display: none;
+}
+
+.qty {
+  border: 1px solid #E0E0E0;
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+@media all and (max-width: 700px) {
+  .wrapper {
+    flex-flow: column;
+  }
+
+  .aside-2 {
+    flex-flow: column;
+    justify-content: start;
+    line-height: 15px;
+  }
+
+  .aside-1 {
+    flex-basis: 0;
+  }
+
+  .aside-2 .size {
+    margin-left: 5px;
+  }
+
+  .aside-2 .qty {
+    margin: 10px 0px 10px 5px;
+  }
+
+  .label {
+    display: inline-block;
+  }
+
+  .sub-header {
+    display: none;
+  }
+
+  .mobile-product-button-header {
+    display: flex;
+  }
+
+  .desktop-product-button-header {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=myStyle.css.map */
