@@ -50,6 +50,9 @@ export class HtmlRender{
         let ul=this.createNode("ul","",className);
                 let li=this.createNode("li");
                 li.appendChild(this.createLink("#","EDIT"));
+                li.addEventListener("click",()=>{
+                    this.openOverlay();
+                });
             ul.appendChild(li);
                 li=this.createNode("li","|");
             ul.appendChild(li);
@@ -102,5 +105,13 @@ export class HtmlRender{
             node.className=className;
         }
         return node;
+    }
+
+    openOverlay(){
+
+       // alert("hello overlay");
+
+       document.getElementById("overlay").style.display = "block";
+
     }
 }

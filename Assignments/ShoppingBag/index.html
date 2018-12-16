@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style/myStyle.css" />
 </head>
 <body>
-        
+                
+
+                        
         <div class="main">
                 <header class="header">
                     <h1>Your Shopping Bag</h1>
@@ -16,10 +18,10 @@
                     <div class="sub-header mobile-hide">
                             <p>3Items</p>
                             <div class="header-items">
+                                        <p>Size</p>
+                                        <p>Qty</p>
+                                        <p>Price</p>
                                 
-                                <p>Size</p>
-                                <p>Qty</p>
-                                <p>Price</p>
                             </div>
                     </div>
                     <div class="line thick"></div>
@@ -173,7 +175,37 @@
                                 </div>
                         </section>
                 </div>
-              </div>
+                <div id="overlay">
+                 <div id="overlay-container">
+                         <section class="overlay-header">
+                             <button id="btn-close" class="btn">X</button>    
+                         </section>
+                         <section class="overlay-main">
+                                        <section class="overlay-box-1">
+                                                <div class="line thick"></div>
+                                                <P class="heading-Text">PAISLEY JEAN</P>
+                                                <p class="price font-35">$21</p>
+                                                <P>PAISLEY</P>
+                                                
+                                <div class="color-code">
+                                <span class="aqwa"></span>
+                                <span class="yellow"></span>
+                                </div>
+                                <div class="product-varient">
+                                <input class="input-box item heading-Text" value="SIZE" />&nbsp;
+                                <input class="input-box item heading-Text" value=QTY />
+                                </div>
+                                <button class="edit-button btn blue--button">EDIT</button>
+                                <a href="#" class="dark-Gray-color">See product details</a>
+                                        </section> 
+                                        <section class="overlay-box-2">
+                                                <img src="images/top-1.jpeg" />
+                                        </section>  
+                                          
+                        </section>
+                 </div>
+                </div>               
+        </div>
   <script src="dist/bundle.js"></script>
 </body>
 </html>
