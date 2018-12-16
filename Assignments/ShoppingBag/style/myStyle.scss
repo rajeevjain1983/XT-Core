@@ -2,112 +2,7 @@ $headingColor:#707070;
 $textColor:#C8C8C8;
 $fontSize:12px;
 
-// ************** Overlay CSS Start
 
-   
-#overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
-}
-
-#overlay-container{
-  padding: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: black;
-  background-color: white;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  
-}
-.overlay-header{
-  display: flex;
-  //border:1px solid red;
-  justify-content: flex-end;
-  flex-grow: 1;
-  text-align: end;
-  align-items: flex-end;
-}
-.overlay-main{
-  display: flex;
-}
-.overlay-box-1{
-  padding: 50px;
-  flex-grow: 1;
-  //border:1px solid red;
-  display:flex;
-  flex-flow: column;
-  justify-content:space-between;
-  align-items: center;
- // align-content: space-between;
-}
-
-.overlay-box-1 .price{
-  border:1px solid black;
-}
-.overlay-box-1 .color-code{
- // border:1px solid black;
-  display: flex;
-}
-.overlay-box-1 .color-code .aqwa{
-  border:1px solid black;
-  padding: 10px;
-  margin: 2px;
-  background-color: aqua;
-}
-.overlay-box-1 .color-code .yellow{
-  border:1px solid black;
-  padding: 10px;
-  //margin: 2px;
-  background-color: yellow;
-}
-.product-varient{
-  display: flex;
-  padding:5px;
-  //justify-content:space-between;
-}
-.product-varient .item{
-  max-width: 80px;
-  text-align: center;
-}
-
-.overlay-box-1 .edit-button{
-  //flex-grow: 1;
-  width:95%;
-  margin:2px;
-}
-.overlay-box-2{
-  //border:1px solid black;
-  text-align: center;
-  //vertical-align: middle;
-
-  //padding: 20px;
-  flex-grow: 1;
-  min-width: 250px;
-  }
-  
-  .loading-Image{
-    position: absolute;
-    top:30%;
-    left:30%;
-    display: none;
-  }
-  .loadingPosition{
-    top:30%;
-    left:43%;
-  }
-
-//*******overlay css end
 
 body{//reset 
   padding:0px;
@@ -242,7 +137,6 @@ body {
   text-transform: none;
 }
 .bottom-container--right{
-  //border:1px solid black;
   min-height: 50px;
   flex-grow:2;
 }
@@ -273,7 +167,6 @@ body {
   justify-content: flex-end;
   padding: 0px;
   margin: 10px;
-  //border: 1px solid black;
   align-items: center;
 }
 .margin-l-10{
@@ -304,15 +197,101 @@ margin-left: 10px;
   color:$textColor;
 }
 
-// .row a{
-//   color:$textColor;
-// }
+// ************** Overlay CSS Start
 
-//*****************************
+   
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
 
+#overlay-container{
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: black;
+  background-color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  
+}
+.overlay-header{
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  text-align: end;
+  align-items: flex-end;
+}
+.overlay-main{
+  display: flex;
+}
+.overlay-box-1{
+  padding: 50px;
+  flex-grow: 1;
+  display:flex;
+  flex-flow: column;
+  justify-content:space-between;
+  align-items: center;
+}
 
+.overlay-box-1 .price{
+  border:1px solid black;
+}
+.overlay-box-1 .color-code{
+  display: flex;
+}
+.overlay-box-1 .color-code .aqwa{
+  border:1px solid black;
+  padding: 10px;
+  margin: 2px;
+  background-color: aqua;
+}
+.overlay-box-1 .color-code .yellow{
+  border:1px solid black;
+  padding: 10px;
+  background-color: yellow;
+}
+.product-varient{
+  display: flex;
+  padding:5px;
+}
+.product-varient .item{
+  max-width: 80px;
+  text-align: center;
+}
 
- //************ Overlay Css End
+.overlay-box-1 .edit-button{
+  width:95%;
+  margin:2px;
+}
+.overlay-box-2{
+  text-align: center;
+  flex-grow: 1;
+  min-width: 250px;
+  }
+  
+  .loading-Image{
+    position: absolute;
+    top:30%;
+    left:30%;
+    display: none;
+  }
+  .loadingPosition{
+    top:30%;
+    left:43%;
+  }
+
+//*******overlay css end
 
 //********** Media Queries
 @media all and (max-width: 700px) {
@@ -334,7 +313,6 @@ margin-left: 10px;
     .aside-2 .size{margin-left: 5px;}
     .aside-2 .qty{margin:10px 0px 10px 5px;}
     .label{display:inline-block;}
-    //.sub-header{display:none;}
     .mobile{display: flex;}
 
     .image-container{
@@ -352,17 +330,16 @@ margin-left: 10px;
     .mobile-hide{
       display: none;
     }
+    .loading-Image{left:17%;}
+    
    // ****************** Bottem container End****
 
 
    
 
     .bottom-container--right .mobile{
-      // display: flex;
       padding:0px;
-     // padding: 20px;
       flex-flow: column;
-      //border:1px solid black;
       justify-content: space-around;
       align-items: center;
       align-content: space-around;
