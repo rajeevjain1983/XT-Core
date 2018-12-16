@@ -35,13 +35,15 @@ const getFieldsValue=function(){
 }
 
  document.querySelector('#btnSubmit').addEventListener('click',function(e){
+    const userComponent=new UserComponent(new UserService('http://localhost:3000/profiles'));
+   console.log(userComponent.findAll());
     let form=document.querySelector("#form1");
     let valid=form.reportValidity();
     console.log(valid);
     if(valid)
     {
         let user=getFieldsValue();
-        const userComponent=new UserComponent(new UserService('http://localhost:3000/profiles'));
+       
        userComponent.addUser(user)
        .then((res)=>{
         console.log(res);
