@@ -10,8 +10,10 @@
 <body>
                 
 
-                        
+                       
         <div class="main">
+                <img id="loader" class="loading-Image loadingPosition" src="images/loadingImage.gif" /> 
+                <div class="content" >
                 <header class="header">
                     <h1>Your Shopping Bag</h1>
                     <div class="line"></div>
@@ -26,6 +28,7 @@
                     </div>
                     <div class="line thick"></div>
                 </header>
+                
                 <div class="product-container">
                         <!-- <div class="container">
                         <div class="row">
@@ -180,31 +183,33 @@
                          <section class="overlay-header">
                              <button id="btn-close" class="btn">X</button>    
                          </section>
+                         <img id="loadingImage" class="loading-Image" src="images/loadingImage.gif" />
                          <section class="overlay-main">
                                         <section class="overlay-box-1">
                                                 <div class="line thick"></div>
-                                                <P class="heading-Text">PAISLEY JEAN</P>
+                                                <P id="productName" class="heading-Text">PAISLEY JEAN</P>
                                                 <p class="price font-35">$21</p>
-                                                <P>PAISLEY</P>
+                                                <P id="productCode">PAISLEY</P>
                                                 
                                 <div class="color-code">
                                 <span class="aqwa"></span>
                                 <span class="yellow"></span>
                                 </div>
                                 <div class="product-varient">
-                                <input class="input-box item heading-Text" value="SIZE" />&nbsp;
-                                <input class="input-box item heading-Text" value=QTY />
+                                <input id="productSize" class="input-box item heading-Text" value="SIZE" />&nbsp;
+                                <input id="productQty" class="input-box item heading-Text" type="number" value=QTY />
                                 </div>
                                 <button class="edit-button btn blue--button">EDIT</button>
                                 <a href="#" class="dark-Gray-color">See product details</a>
                                         </section> 
                                         <section class="overlay-box-2">
-                                                <img src="images/top-1.jpeg" />
+                                                <img id="productImage" src="images/top-1.jpeg" />
                                         </section>  
                                           
                         </section>
                  </div>
-                </div>               
+                </div>  
+        </div>             
         </div>
   <script src="dist/bundle.js"></script>
 </body>

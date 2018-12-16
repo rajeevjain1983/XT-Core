@@ -1,4 +1,4 @@
-
+import {Overlay} from './Overlay';
 export class HtmlRender{
     constructor(){
 
@@ -8,7 +8,7 @@ export class HtmlRender{
         
         let productContainer=document.querySelector(".product-container");
         result.forEach((item,index)=>{
-            console.log(item);
+            //console.log(item);
             let container=this.createNode("div","","container");
                     let row=this.createNode("div","","row");
                             let imageContainer=this.createNode("aside","","image-container");
@@ -19,7 +19,7 @@ export class HtmlRender{
                                             aside1.appendChild(this.createNode("p",item.name,"heading-Text"));
                                             aside1.appendChild(this.createNode("p",item.code));
                                             aside1.appendChild(this.createNode("p",item.color));
-                                            aside1.appendChild(this.createButtonPanel("button-panel mobile-hide"));
+                                            aside1.appendChild(this.createButtonPanel(item.id.toString(),"button-panel mobile-hide"));
                                     let aside2=this.createNode("aside","","aside aside-2");
                                         let p=this.createNode("p");
                                                 p.appendChild(this.createNode("span","Size:","label"));
@@ -34,10 +34,10 @@ export class HtmlRender{
                                 wrapper.appendChild(aside2);
                         row.appendChild(wrapper);
                 container.appendChild(row);
-                container.appendChild(this.createButtonPanel("button-panel mobile"));
+                container.appendChild(this.createButtonPanel(item.id.toString(),"button-panel mobile"));
             productContainer.appendChild(container);
             let lineClass="line";
-            if(index == result.length-1){
+            if(index === result.length-1){
                 lineClass="line thick";
             }
             productContainer.appendChild(this.createNode("div","",lineClass));
@@ -45,13 +45,13 @@ export class HtmlRender{
         });
     }
 
-    createButtonPanel(className)
+    createButtonPanel(productId,className)
     {
         let ul=this.createNode("ul","",className);
                 let li=this.createNode("li");
-                li.appendChild(this.createLink("#","EDIT"));
+                li.appendChild(this.createLink("#","EDIT","",productId));
                 li.addEventListener("click",()=>{
-                    this.openOverlay();
+                    new Overlay().Open(productId);
                 });
             ul.appendChild(li);
                 li=this.createNode("li","|");
@@ -92,7 +92,9 @@ export class HtmlRender{
         return node;
     }
 
-    createLink(href="#",text="",className=""){
+    createLink(href="#",text="",className="",args=""){
+        
+        //console.log(param.length);
         let node = document.createElement("a");
         node.href=href;
         if(text.length>0)
@@ -104,14 +106,12 @@ export class HtmlRender{
         {
             node.className=className;
         }
+        if(args.length>0)
+        {
+            node.setAttribute('args', args);
+        }
         return node;
     }
 
-    openOverlay(){
-
-       // alert("hello overlay");
-
-       document.getElementById("overlay").style.display = "block";
-
-    }
+    
 }

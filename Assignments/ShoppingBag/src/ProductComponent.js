@@ -15,11 +15,10 @@ export class ProductComponent{
         .catch(err=>console.log(err));
     }
     getProducts(){
-        return this.productService.findAll()
-        // .then(res=>res.map((item,index)=>{
-        //     console.log(item);
-        // }))
-        // .catch(err=>console.log(err))
+        let result= this.productService.findAll();
+        return new Promise((resolve, reject)=>{
+            setTimeout(_=>resolve(result),1000);
+            })
     }
     deleteProduct(id){
         this.productService.deleteproduct(id)
@@ -27,9 +26,10 @@ export class ProductComponent{
         .catch(err=>console.log(err));
     }
 
-    findById(id){
-        this.productService.findById(id)
-        .then(res=>console.log(res))
-        .catch(err=>console.log(err));
+    getProduct(id){
+       let result= this.productService.findById(id);
+       return new Promise((resolve, reject)=>{
+        setTimeout(_=>resolve(result),1000);
+        })
     }
 }
