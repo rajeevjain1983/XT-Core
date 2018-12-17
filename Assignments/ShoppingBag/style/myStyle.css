@@ -405,6 +405,24 @@ body {
     left: 17%;
   }
 
+  .overlay-box-1 {
+    padding: 3px;
+  }
+
+  .font-35 {
+    margin: 0;
+    padding: 0;
+  }
+
+  #overlay-container {
+    max-height: 500px;
+    border: 1px solid black;
+  }
+
+  .overlay-box-2 img {
+    max-height: 150px;
+  }
+
   .bottom-container--right .mobile {
     padding: 0px;
     flex-flow: column;
