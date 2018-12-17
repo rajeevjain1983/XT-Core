@@ -7,8 +7,10 @@ export class HtmlRender{
     renderProducts(result=[]){
         document.querySelector("#totalItem").innerHTML=`${result.length} Items`;
         let productContainer=document.querySelector(".product-container");
+        let totalPrice=0;
         result.forEach((item,index)=>{
             //console.log(item);
+            totalPrice=totalPrice+parseFloat(item.price);
             let container=this.createNode("div","","container");
                     let row=this.createNode("div","","row");
                             let imageContainer=this.createNode("aside","","image-container");
@@ -43,6 +45,9 @@ export class HtmlRender{
             productContainer.appendChild(this.createNode("div","",lineClass));
 
         });
+
+        document.querySelector("#subTotal").innerHTML=`$${totalPrice}`;
+        document.querySelector("#estimatedTotal").innerHTML=`$${totalPrice}`;
     }
 
     createButtonPanel(productId,className)

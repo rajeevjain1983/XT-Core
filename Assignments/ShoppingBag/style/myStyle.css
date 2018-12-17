@@ -308,6 +308,7 @@ body {
 
 .product-varient .item {
   max-width: 80px;
+  min-width: 80px;
   text-align: center;
 }
 
@@ -332,6 +333,15 @@ body {
 .loadingPosition {
   top: 30%;
   left: 43%;
+}
+
+.dropdown {
+  -webkit-appearance: none;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  border: 1px solid #D0D0D0;
+  padding: 6px;
 }
 
 @media all and (max-width: 700px) {

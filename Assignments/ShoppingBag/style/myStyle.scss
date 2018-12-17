@@ -274,6 +274,7 @@ margin-left: 10px;
 }
 .product-varient .item{
   max-width: 80px;
+  min-width: 80px;
   text-align: center;
 }
 
@@ -296,6 +297,15 @@ margin-left: 10px;
   .loadingPosition{
     top:30%;
     left:43%;
+  }
+  .dropdown{
+    -webkit-appearance: none;
+ // -webkit-border-radius: 0px;
+    border-radius:0px;
+    border:none;
+    outline: none;
+    border:1px solid #D0D0D0;
+    padding: 6px;
   }
 
 //*******overlay css end
