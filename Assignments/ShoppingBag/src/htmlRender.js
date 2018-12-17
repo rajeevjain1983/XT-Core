@@ -5,7 +5,7 @@ export class HtmlRender{
     }
     
     renderProducts(result=[]){
-        
+        document.querySelector("#totalItem").innerHTML=`${result.length} Items`;
         let productContainer=document.querySelector(".product-container");
         result.forEach((item,index)=>{
             //console.log(item);

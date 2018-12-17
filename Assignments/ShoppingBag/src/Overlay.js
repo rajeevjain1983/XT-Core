@@ -34,5 +34,13 @@ export class Overlay{
         document.querySelector("#productQty").value=item.qty;
         document.querySelector("#productSize").value=item.size;
         document.querySelector("#productId").value=item.id;
+        if(item.color==="Yellow"){
+            document.querySelector(".yellow").className="yellow product-colors select";
+            document.querySelector(".aqwa").className="aqwa product-colors";
+        }
+        else{
+            document.querySelector(".aqwa").className="aqwa product-colors select";
+            document.querySelector(".yellow").className="yellow product-colors";
+        }
    }
 }

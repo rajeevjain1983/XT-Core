@@ -244,23 +244,30 @@ margin-left: 10px;
   align-items: center;
 }
 
-.overlay-box-1 .price{
-  border:1px solid black;
-}
+
 .overlay-box-1 .color-code{
   display: flex;
 }
 .overlay-box-1 .color-code .aqwa{
-  border:1px solid black;
-  padding: 10px;
-  margin: 2px;
   background-color: aqua;
 }
+
 .overlay-box-1 .color-code .yellow{
-  border:1px solid black;
-  padding: 10px;
   background-color: yellow;
 }
+.overlay-box-1 .color-code .select{
+  border:2px solid black;
+}
+.overlay-box-1 .product-colors{
+  border:1px solid $textColor;
+  padding: 10px;
+  margin-right: 2px;
+}
+
+.overlay-box-1 .product-colors:hover{
+  border:1px solid blue;
+}
+
 .product-varient{
   display: flex;
   padding:5px;
