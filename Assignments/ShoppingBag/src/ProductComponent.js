@@ -19,7 +19,7 @@ export class ProductComponent{
     getProducts(){
         let result= this.productService.findAll();
         return new Promise((resolve, reject)=>{
-            setTimeout(_=>resolve(result),200);
+            setTimeout(_=>resolve(result),1);
             })
     }
     deleteProduct(id){

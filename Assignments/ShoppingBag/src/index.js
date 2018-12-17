@@ -30,17 +30,29 @@ document.querySelector("#btn-close").addEventListener("click",(e)=>{
 //     new Overlay().Close();
 // });
 
+document.querySelectorAll(".product-colors").forEach((item, index)=>{
+    item.addEventListener("click",()=>{
+        
+        let selectColor=item.attributes["color"].value;
+        document.querySelector("#productColor").value=selectColor;
+    });
+
+});
+
 
 
 document.querySelector("#btnSave").addEventListener("click",(e)=>{
+
     let qty=document.querySelector("#productQty").value;
     let productId=document.querySelector("#productId").value;
+    let color=document.querySelector("#productColor").value;
     document.querySelector("#loadingImage").style.display = "block"; 
     document.querySelector(".overlay-main").style.visibility = "hidden"; 
     //alert(productId);
     productComponent.getProduct(productId)
     .then((product)=>{
         product.qty=qty;
+        product.color=color;
         productComponent.updateProduct(product)
         .then((res)=>{
             //console.log(res);
