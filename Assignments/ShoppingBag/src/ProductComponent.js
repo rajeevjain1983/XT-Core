@@ -10,9 +10,11 @@ export class ProductComponent{
         return this.productService.addProduct(product);
     }
     updateProduct(product){
-        this.productService.updateproduct(product)
-        .then(res=>console.log(res))
-        .catch(err=>console.log(err));
+        console.log(product);
+        let result=this.productService.updateProduct(product);
+        return new Promise((resolve, reject)=>{
+            setTimeout(_=>resolve(result),1000);
+            })
     }
     getProducts(){
         let result= this.productService.findAll();

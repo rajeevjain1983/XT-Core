@@ -1,6 +1,5 @@
 {
   "products": [
-    
     {
       "id": 142,
       "name": "solid green cotton tshirt",
@@ -26,7 +25,7 @@
     {
       "id": 826,
       "name": "Solid Blue cotton tshirt",
-      "qty": "1",
+      "qty": "2",
       "size": "L",
       "color": "Blue",
       "price": "9.50",

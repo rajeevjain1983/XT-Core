@@ -33,5 +33,6 @@ export class Overlay{
         document.querySelector("#productCode").innerHTML=item.code;
         document.querySelector("#productQty").value=item.qty;
         document.querySelector("#productSize").value=item.size;
+        document.querySelector("#productId").value=item.id;
    }
 }
