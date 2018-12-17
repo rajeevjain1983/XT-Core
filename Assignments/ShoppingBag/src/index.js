@@ -46,6 +46,7 @@ document.querySelector("#btnSave").addEventListener("click",(e)=>{
     let qty=document.querySelector("#productQty").value;
     let productId=document.querySelector("#productId").value;
     let color=document.querySelector("#productColor").value;
+    let size=document.querySelector("#productSize").value;
     document.querySelector("#loadingImage").style.display = "block"; 
     document.querySelector(".overlay-main").style.visibility = "hidden"; 
     //alert(productId);
@@ -53,6 +54,7 @@ document.querySelector("#btnSave").addEventListener("click",(e)=>{
     .then((product)=>{
         product.qty=qty;
         product.color=color;
+        product.size=size;
         productComponent.updateProduct(product)
         .then((res)=>{
             //console.log(res);
