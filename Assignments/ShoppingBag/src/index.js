@@ -22,7 +22,8 @@ const productComponent=new ProductComponent(new ProductService('http://localhost
 loadData();
 
 document.querySelector("#btn-close").addEventListener("click",(e)=>{
-    new Overlay().Close();
+    document.getElementById("overlay").style.display = "none";
+    //new Overlay().Close();
 });
 
 // document.querySelector("#overlay").addEventListener("click",(e)=>{
